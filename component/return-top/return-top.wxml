@@ -1,0 +1,4 @@
+<!--component/return-top/return-top.wxml-->
+<view class="top" wx:if="{{isShow}}" bindtap="returnTop">
+	<image src="/images/returnTop.png" mode="" class="img"/>
+</view>

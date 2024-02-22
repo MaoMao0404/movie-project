@@ -1,0 +1,8 @@
+<!--component/top-tabber/top-tabber.wxml-->
+<view class="top-tabbar">
+	<view class="tabber-content">
+		<view class="type" wx:for="{{typeList}}" wx:key="index" bindtap="checkType" data-type="{{item.type}}">
+			<text class="title {{item.type==type ? 'isActive':''}}">{{item.title}}</text>
+		</view>
+	</view>
+</view>

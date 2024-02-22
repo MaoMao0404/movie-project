@@ -1,0 +1,18 @@
+<!--pages/category/category.wxml-->
+
+<!-- 分类列表 -->
+<category-nav isShow="{{isShow}}" categories="{{categories}}" countries="{{countries}}" years="{{years}}" bindchange="change"></category-nav>
+
+<!-- 影视显示 -->
+<view class="content">
+	<row-list class="cate-item" wx:for="{{moviesList}}" wx:key="index" movie="{{item}}"></row-list>
+</view>
+
+<!-- loading框 -->
+<loading isShow="{{isLoading}}"></loading>
+
+<!-- 返回顶部 -->
+<return-top isShow="{{isTop}}"></return-top>
+
+<!-- 没有更多数据 -->
+<view wx:if="{{isMore}}" class="isMore">没有更多数据</view>

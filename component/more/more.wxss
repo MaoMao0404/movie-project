@@ -1,0 +1,8 @@
+/* component/more/more.wxss */
+.isMore{
+	width: 100%;
+	height: 70rpx;
+	color: var(--color-text-second);
+	text-align: center;
+	line-height: 70rpx;
+}

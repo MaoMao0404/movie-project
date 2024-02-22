@@ -1,0 +1,48 @@
+<!--component/video-item/video-item.wxml-->
+<view class="video-item">
+	<!-- 视频 -->
+	<view class='video-content'>
+		<!-- 视频 -->
+    <view class="video" wx:if="{{video.id==videoId}}">
+      <video class="video-player" src="{{video.sources[0].url}}" controls autoplay>
+      </video>
+    </view>
+
+    <view class='video-cover' bindtap="doPlay" data-id="{{video.id}}">
+			<!-- 标题 封面 -->
+      <view class="video-title">{{video.title}}</view>
+			<image class='video-poster' src='{{video.poster}}' />
+			<!-- 播放按钮 -->
+      <view class="video-play">
+        <text class="play-icon iconfont icon-bofang1"></text>
+      </view>
+			<!-- 播放量 视频时长 -->
+      <view class="video-info">
+        <view class="video-plays">{{video.play_count}}次播放</view>
+        <view class="video-duration">{{time}}</view>
+      </view>
+    </view>
+	</view>
+	
+	<!-- 作者 评论 点赞 -->
+	<view class="video-footer">
+		<!-- 作者信息 -->
+    <view class="video-author" catchtap="pathToAuthor">
+      <image class='author-avatar' src='{{video.author.avatar}}' />
+      <view class="author-name">{{video.author.username}}</view>
+    </view>
+		<!-- 空白区域分割 -->
+    <view class="space"></view>
+		<!-- 点赞 评论 -->
+    <view class="video-tool">
+      <view class="tool-item">
+        <text class="tool-item-icon iconfont icon-dianzan" name="like"></text>
+        <text class="tool-item-count">{{video.like_count}}</text>
+      </view>
+      <view class="tool-item">
+        <text class="tool-item-icon iconfont icon-pinglun" name="comment"></text>
+        <text class="tool-item-count">{{video.comment_count}}</text>
+      </view>
+    </view>
+  </view>
+</view>

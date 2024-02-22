@@ -1,0 +1,8 @@
+<!--component/my-formItem/my-formItem.wxml-->
+<view class="my-formList" >
+	<view class="content">
+		<image src="{{src}}" mode="" class="iconf1"/>
+		<view class="title">{{title}}</view>
+		<view class="iconf2">></view>
+	</view>
+</view>

@@ -1,0 +1,5 @@
+<!--component/footer/footer.wxml-->
+<view class="footer">
+	<image class="img" src="/images/logo.png" mode=""/>
+	<view class="title">影评网</view>
+</view>

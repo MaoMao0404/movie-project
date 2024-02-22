@@ -1,0 +1,14 @@
+<!--component/row-list/row-list.wxml-->
+<view class="movie-row" bindtap="pathTo">
+  <view class="movie-row__poster">
+
+		<image class="poster" mode="aspectFill" lazy-load src="{{movie.poster}}"/>
+    <view class="movie-row__info">
+      <text class="rating" wx:if="{{movie.rating}}">{{movie.rating}}分</text>
+      <text class="rating" wx:else>暂无评分</text>
+    </view>
+	</view>
+	
+  <view class="movie-row__title">{{movie.title}}</view>
+  <slot />
+</view>

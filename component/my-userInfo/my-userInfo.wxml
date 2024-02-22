@@ -1,0 +1,9 @@
+<view class="my-userInfo">
+	<view class="images">
+		<image class="img" src="/images/logo.png" mode="aspectFill"/>
+	</view>
+	<view class="userInfo">
+		<view wx:if="{{isLogin}}">name</view>
+		<view wx:else>立即登录</view>
+	</view>
+</view>

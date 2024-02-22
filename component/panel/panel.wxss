@@ -1,0 +1,52 @@
+/* component/panel/panel.wxss */
+.panel {
+	margin-top: 40rpx;
+}
+
+.panel-header {
+	height: 84rpx;
+	line-height: 84rpx;
+	display: flex;
+	align-items: center;
+}
+
+.panel-title {
+	flex: 1;
+	font-weight: var(--weight-font-main);
+	font-size: var(--size-font-main);
+	color: var(--color-text-main);
+	display: inline-block;
+}
+.panel-title::before{
+	content: '';
+	display: inline-block;
+	box-sizing: border-box;
+	margin-right: 10rpx;
+	width: 12rpx;
+	height: 30rpx;
+	background-color: var(--color-border-main);
+	border-radius: 10rpx;
+}
+
+
+.panel-more {
+	box-sizing: border-box;
+	height: 80rpx;
+	padding-right: 14rpx;
+	color: var(--color-text-end);
+}
+
+.panel-content {
+	width: 100%;
+}
+
+.panel-content.scroll-x {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+}
+
+.panel-content::-webkit-scrollbar {
+	display: none;
+}

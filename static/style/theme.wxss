@@ -1,0 +1,25 @@
+page{
+	/* 主要文字颜色 标题 bar */
+	--color-text-main:#333333;
+	/* 正文文字颜色 */
+	--color-text-second:#707070;
+	/* 次要文字 */
+	--color-text-end:#8a8a8a;
+	
+	/* 主要文字标题 字号 */
+	--size-font-main:34rpx;
+	/* 主要、次要文字标题 粗细 */
+	--weight-font-main:600;
+
+	/* 边框颜色 */
+	--color-border-main:#333333;
+	/* 边框圆角 */
+	--border-radius-all:10rpx;
+
+	/* 背景颜色 */
+	--backgroundColor-main:#333333;
+	/* 电影列表背景颜色 */
+	--backgroundColor-movie:rgba(221, 221, 221, 0.3);
+	/* 阴影模糊 */
+	--shadow-all:2rpx 2rpx 20rpx 2rpx rgba(0, 0, 0, .3);
+}

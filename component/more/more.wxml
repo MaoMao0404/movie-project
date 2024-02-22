@@ -1,0 +1,3 @@
+<!--component/more/more.wxml-->
+<!-- 没有更多数据 -->
+<view wx:if="{{isMore}}" class="isMore">没有更多数据</view>

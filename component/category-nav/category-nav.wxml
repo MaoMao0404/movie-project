@@ -1,0 +1,24 @@
+
+<!-- 全部分类 -->
+<view class="category-navlist ">
+	<view class="navlist-item {{item.name==params.category ? 'is-active':''}}" wx:for="{{categories}}" wx:key="index" bindtap="checked" data-change="{{item.name}}" data-type="category">{{item.name}}</view>
+	
+</view>
+
+<!-- 类型分类 -->
+<view class="category-navlist">
+	<view class="navlist-item {{item.name==params.genre ? 'is-active':''}}" wx:for="{{type}}" wx:key="index" bindtap="checked" data-change="{{item.name}}" data-type="genre">{{item.name}}</view>
+</view>
+
+<!-- 国家分类 -->
+<view class="category-navlist">
+	<view class="navlist-item {{item.name==params.country ? 'is-active':''}}" wx:for="{{countries}}" wx:key="index" bindtap="checked" data-change="{{item.name}}" data-type="country">{{item.name}}</view>
+</view>
+
+<!-- 年份分类 -->
+<view class="category-navlist">
+	<view class="navlist-item {{item.name==params.year ? 'is-active':''}}" wx:for="{{years}}" wx:key="index" bindtap="checked" data-change="{{item.name}}" data-type="year">{{item.name}}</view>
+</view>
+
+<!-- 提示框 -->
+<view class="fixed" wx:if="{{isShow}}">{{params.category}}</view>

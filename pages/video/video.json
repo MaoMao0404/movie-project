@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "看点",
+  "navigationBarBackgroundColor": "#333333",
+  "onReachBottomDistance": 50
+}

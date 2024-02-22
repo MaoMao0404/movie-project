@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "search-history":"./component/search-history/search-history"
+  },
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "搜索",
+  "navigationBarBackgroundColor": "#fff",
+  "onReachBottomDistance": 50
+}

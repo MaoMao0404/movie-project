@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "onReachBottomDistance": 50,
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "分类"
+}

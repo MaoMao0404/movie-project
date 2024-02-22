@@ -1,0 +1,26 @@
+.my-userMenu{
+	display: flex;
+	height: 160rpx;
+	border: 2px solid var(--color-border-main);
+	border-radius: 20rpx;
+	align-items: center;
+	justify-content: space-between;
+}
+.my-userMenu .menu-item{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	flex:1
+}
+.my-userMenu .menu-item .menu-count{
+	height: 64rpx;
+	text-align: center;
+	color: var(--color-text-main);
+	font-size: 38rpx;
+}
+.my-userMenu .menu-item .menu-name{
+	color: var(--color-text-second);
+	font-size: 26rpx;
+	font-weight: 600;
+}

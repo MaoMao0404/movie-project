@@ -1,0 +1,9 @@
+/**app.wxss**/
+@import 'static/style/theme.wxss';
+element{
+	box-sizing: border-box;
+}
+page{
+	box-sizing: border-box;
+	padding: 0 20rpx;
+}

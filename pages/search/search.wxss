@@ -1,0 +1,30 @@
+/* pages/search/search.wxss */
+@import '/static/style/icon.wxss';
+.search{
+	box-sizing: border-box;
+	width: 600rpx;
+	height: 70rpx;
+	display: flex;
+	align-items: center;
+	border: 2px solid #000;
+	border-radius: 50rpx;
+	margin: 5rpx auto;
+	padding: 4rpx 30rpx;
+}
+.search .ico image{
+	width: 25px;
+	height: 25px;
+	margin-right: 15rpx;
+	margin-top: 8rpx;
+}
+.search input{
+	width: 400rpx;
+	font-size: 35rpx;
+	margin-top: 2rpx;
+	color: var(--color-text-second);
+}
+.search .cancel{
+	margin-left: 20rpx;
+	width: 32rpx;
+	height: 32rpx;
+}

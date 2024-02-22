@@ -1,0 +1,31 @@
+<!--pages/search/search.wxml-->
+<!-- 搜索框 -->
+<view class="search" >
+	<view class="ico">
+		<image src="../../images/searchicon.png"></image>
+	</view>
+	<input placeholder="搜索" value="{{keyword}}" bindinput="keywordChange"></input>
+	<image class="cancel" src="/images/cancel.png" mode="aspectFill" wx:if="{{keyword}}" bindtap="clearkey"/>
+</view>
+
+<!-- 搜索结果 -->
+<view wx:if="{{keyword}}">
+	<!-- tabbar栏 -->
+	<top-tabbar typeList="{{typeList}}" bindcheckType="checkType" type="{{type}}"></top-tabbar>
+	<!-- 影视内容 -->
+	<movie-list wx:if="{{type=='movie'}}" movieList="{{movieList}}"></movie-list>
+	<!-- 演员内容 -->
+	<actor-list wx:else actorList="{{actorList}}"></actor-list>
+
+	<!-- loading框 -->
+	<loading isShow="{{isLoading}}"></loading>
+
+	<!-- 返回顶部 -->
+	<return-top isShow="{{isTop}}"></return-top>
+
+	<!-- 是否有更多数据 -->
+	<more isMore="{{isMore}}"></more>
+</view>
+
+<!-- 历史记录 -->
+<search-history wx:else historyList="{{historyList}}" bindclearhistory="clearhistory" bindcheckhistoryWord="checkhistoryWord"></search-history>

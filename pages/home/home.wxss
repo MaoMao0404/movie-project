@@ -1,0 +1,44 @@
+/* pages/home/home.wxss */
+.search{
+	box-sizing: border-box;
+	width: 600rpx;
+	height: 70rpx;
+	display: flex;
+	justify-content: space-between;
+	border: 2px solid #000;
+	border-radius: 50rpx;
+	margin: 5rpx auto;
+	padding: 4rpx 15rpx;
+	line-height: 70rpx;
+}
+.search .ico image{
+	width: 25px;
+	height: 25px;
+	margin-right: 20rpx;
+}
+.search input{
+	width: 600rpx;
+	font-size: 35rpx;
+	margin-top: 2rpx;
+	color: var(--color-text-second);
+}
+swiper{
+	box-sizing: border-box;
+	height: 380rpx;
+	margin: 50rpx 0;
+}
+swiper-item{
+	width: 710rpx;
+	height: 380rpx;
+	border-radius: 10rpx;
+	/* background-color: pink; */
+}
+.coming-date{
+	box-sizing: border-box;
+	margin-top: 8rpx;
+	color: var(--color-text-second);
+	font-size: 26rpx;
+}
+.home-rowlist{
+	margin-right:25rpx ;
+}

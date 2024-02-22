@@ -1,0 +1,14 @@
+<!--component/panel/panel.wxml-->
+<view class="panel" >
+  <view class="panel-header">
+    <view class="panel-title">{{ title }}</view>
+
+    <view class="panel-more" bindtap="pathTo">
+			<text class="subtitle" wx:if="{{subtitle}}">{{ subtitle }}></text>
+    </view>
+  </view>
+
+  <view class="panel-content {{ scrollX ? 'scroll-x' :''}}">
+    <slot />
+  </view>
+</view>

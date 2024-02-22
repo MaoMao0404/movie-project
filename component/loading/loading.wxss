@@ -1,0 +1,8 @@
+/* component/loading/loading.wxss */
+.loading{
+	width: 100%;
+	height: 70rpx;
+	color: var(--color-text-second);
+	text-align: center;
+	line-height: 70rpx;
+}

@@ -1,0 +1,10 @@
+/* component/return-top/return-top.wxss */
+.top{
+	position: fixed;
+	top: 300rpx;
+	right: 0;
+}
+.img{
+	width: 64rpx;
+	height: 64rpx;
+}

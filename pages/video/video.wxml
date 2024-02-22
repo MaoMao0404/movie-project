@@ -1,0 +1,14 @@
+<!-- 视频显示 -->
+<view class="videoList">
+	<!-- id用于获取页面元素 -->
+	<video-item id="video_{{ item.id }}" wx:for="{{videoList}}" wx:key="id" video="{{item}}" videoId="{{videoId}}" bindvideoPlay="videoPlay"></video-item>
+</view>
+
+<!-- loading框 -->
+<loading isShow="{{isLoading}}"></loading>
+
+<!-- 返回顶部 -->
+<return-top isShow="{{isTop}}"></return-top>
+
+<!-- 没有更多数据 -->
+<view wx:if="{{isMore}}" class="isMore">没有更多数据</view>

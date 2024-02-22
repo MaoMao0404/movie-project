@@ -1,0 +1,30 @@
+.my-userInfo{
+	display: flex;
+	height: 180rpx;
+	padding: 0 30rpx;
+}
+.images{
+	box-sizing: border-box;
+	position: relative;
+	width: 128rpx;
+	height: 128rpx;
+	margin: 30rpx 0;
+	border: 2px solid var(--color-border-main);
+	border-radius: 50%;
+}
+.images .img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 70%;
+	height: 70%;
+}
+.userInfo{
+	box-sizing: border-box;
+	margin: 75rpx 30rpx;
+	font-size: 38rpx;
+	color: var(--color-text-main);
+}

@@ -1,0 +1,23 @@
+/* component/top-tabber/top-tabber.wxss */
+.tabber-content{
+	box-sizing: border-box;
+	margin-top: 20rpx;
+	display: flex;
+	align-items: center;
+	height: 100rpx;
+}
+.tabber-content .type{
+	flex:1;
+	text-align: center;
+	color: var(--color-text-second);
+	font-size: 34rpx;
+	font-weight: 600;
+}
+.tabber-content .type .title{
+	padding-bottom: 15rpx;
+}
+.isActive{
+	color: var(--color-text-main);
+	border-bottom: 3px solid thistle;
+	border-radius: 2px;
+}

@@ -1,0 +1,44 @@
+/* component/movie-list/movie-list.wxss */
+.movie-list{
+	box-sizing: border-box;
+	margin-top: 65rpx;
+}
+.movie-listcontent{
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	height: 170rpx;
+	padding: 10rpx 30rpx;
+	background-color: rgba(221, 221, 221, 0.3);
+	border-radius:var(--border-radius-all);
+}
+.movie-listcontent .img{
+	align-self: flex-end;
+	width: 156rpx;
+	height: 200rpx;
+	border-radius: 10rpx;
+	box-shadow: var(--shadow-all);
+}
+.movie-listcontent .text{
+	display: flex;
+	justify-content: space-between;
+	width: 460rpx;
+	padding-top:15rpx;
+	color: var(--color-text-end);
+	font-size: 30rpx;
+}
+.movie-listcontent .text .title{
+	color: var(--color-text-main);
+	margin-bottom: 8rpx;
+	font-size: 34rpx;
+	font-weight: var(--weight-font-main);
+	overflow: hidden;
+}
+.movie-listcontent .text .genre{
+	margin-top: 4rpx;
+}
+.movie-listcontent .text .rating{
+	color: orange;
+	font-weight: 400;
+}
+

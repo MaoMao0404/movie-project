@@ -1,0 +1,46 @@
+/* pages/search/component/search-history/search-history.wxss */
+@import '/static/style/icon.wxss';
+.record {
+	padding: 0 50rpx;
+	margin-top: 40rpx;
+}
+
+.record-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 50rpx;
+}
+
+.record-title {
+	color: var(--color-text-main);
+	font-size: 36rpx;
+	font-weight: 600;
+}
+
+.record-list {
+	margin: 12rpx -12rpx 0;
+}
+
+.record-item {
+	display: inline-block;
+	margin: 12rpx;
+	padding: 0 24rpx;
+	height: 60rpx;
+	line-height: 56rpx;
+	border: 2px solid var(--color-text-main);
+	border-radius: 40rpx;
+	color: white;
+	font-size: 34rpx;
+	background-color: var(--color-text-main);
+}
+
+.delete{
+	margin-top: 4rpx;
+	font-size: 50rpx;
+}
+.nodata{
+	text-align: center;
+	margin-top: 20rpx;
+	color: var(--color-text-second);
+}

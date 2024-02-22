@@ -1,0 +1,19 @@
+/* component/footer/footer.wxss */
+.footer{
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 140rpx;
+	margin: 40rpx 0 ;
+}
+.footer .img{
+	width: 50rpx;
+	height: 50rpx;
+	margin-right: 12rpx;
+}
+.title{
+	font-size: 30rpx;
+	font-weight: 600;
+	color: var(--color-text-main);
+}

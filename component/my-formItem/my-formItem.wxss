@@ -1,0 +1,26 @@
+/* component/my-formItem/my-formItem.wxss */
+@import '/static/style/icon.wxss';
+.my-formList{
+	height: 100rpx;
+	padding: 0 32rpx;
+}
+.content{
+	position: relative;
+	box-sizing: border-box;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	color: var(--color-text-main);
+	border-bottom: 1px solid rgb(219, 219, 219);
+}
+.iconf1{
+	width: 50rpx;
+	height: 50rpx;
+	margin-right:12rpx ;
+}
+.iconf2{
+	position: absolute;
+	right: 10rpx;
+	font-size: 38rpx;
+	color: var(--color-text-second);
+}

@@ -1,0 +1,27 @@
+<!--component/movie-list/movie-list.wxml-->
+<view class="movie-list" wx:for="{{movieList}}" wx:key="id">
+	<view class="movie-listcontent">
+		<image class="img" src="{{item.poster}}" mode="aspectFill"/>
+		<view class="text">
+			<view class="detail">
+				<view class="title">{{function.getStr(item.title,0,11)}}</view>
+				<text>{{item.category}} </text>
+				<text>{{function.getStr(item.countries,0,12)}}</text>
+				<view class="genre">
+					{{function.getStr(item.genres,0,14)}} 
+				</view>
+			</view>
+			<view class="rating">{{item.rating}}分</view>
+		</view>
+	</view>
+</view>
+
+
+<wxs module="function">
+      module.exports = {
+        getStr:function(str,start,end){
+          return str.slice(start,end)
+        }
+      }
+</wxs> 
+​

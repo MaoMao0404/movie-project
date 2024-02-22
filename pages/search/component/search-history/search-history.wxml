@@ -1,0 +1,12 @@
+<!--pages/search/component/search-history/search-history.wxml-->
+<view class="record">
+  <view class="record-header">
+    <text class="record-title">历史记录</text>
+		<text class="iconfont icon-lajitong delete" bindtap="clearHistory"></text>
+  </view>
+
+  <view class="record-list" wx:if="{{historyList.length!==0}}">
+    <view class="record-item" wx:for="{{historyList}}" wx:key="index" bindtap="checkHistoryWord" data-historyword="{{item}}">{{item}}</view>
+  </view>
+	<view wx:else class="nodata">暂无数据</view>
+</view>

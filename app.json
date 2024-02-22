@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/category/category",
+    "pages/video/video",
+    "pages/my/my",
+    "pages/search/search"
+  ],
+  "usingComponents": {
+    "home-menu":"/component/home-menu/home-menu",
+    "panel":"/component/panel/panel",
+    "row-list":"/component/row-list/row-list",
+    "footer":"/component/footer/footer",
+    "article":"/component/article/article",
+    "category-nav":"/component/category-nav/category-nav",
+    "loading":"/component/loading/loading",
+    "more":"/component/more/more",
+    "return-top":"/component/return-top/return-top",
+    "video-item":"/component/video-item/video-item",
+    "my-userInfo":"/component/my-userInfo/my-userInfo",
+    "my-userMenu":"/component/my-userMenu/my-userMenu",
+    "my-userList":"/component/my-userList/my-userList",
+    "my-formItem":"/component/my-formItem/my-formItem",
+    "top-tabbar":"/component/top-tabbar/top-tabbar",
+    "movie-list":"/component/movie-list/movie-list",
+    "actor-list":"/component/actor-list/actor-list"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "list": [{
+        "pagePath": "pages/home/home",
+        "iconPath": "images/tabBarimg/home.png",
+        "selectedIconPath": "images/tabBarimg/home_fill.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "iconPath": "images/tabBarimg/category.png",
+        "selectedIconPath": "images/tabBarimg/category_fill.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "iconPath": "images/tabBarimg/video.png",
+        "selectedIconPath": "images/tabBarimg/video_fill.png"
+
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/tabBarimg/my.png",
+        "selectedIconPath": "images/tabBarimg/my_fill.png"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "影评网",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundTextStyle": "dark"
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
