@@ -1,0 +1,41 @@
+/* pages/movie/detail/components/halfPage-brief/halfPage-brief.wxss */
+/* 半屏弹窗中基本信息样式 */
+.detail-main {
+	padding: 20rpx 30rpx;
+}
+
+.detail-content {
+	padding-bottom: 20rpx;
+}
+
+.item {
+	padding: 15rpx 0;
+	line-height: 50rpx;
+	display: flex;
+	font-size: 28rpx;
+}
+
+.label {
+	min-width: 100rpx;
+	color: var(--color-text-regular);
+}
+
+.value {
+	flex: 1;
+	color: var(--color-text-primary);
+	width: 0;
+	word-break: break-all;
+}
+
+.summary {
+	margin-top: 20rpx;
+	line-height: 1.6;
+	text-align: justify;
+	word-break: break-all;
+}
+
+.no-summary {
+	text-align: center;
+	font-size: 28rpx;
+	color: var(--color-text-secondary);
+}

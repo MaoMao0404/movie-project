@@ -1,0 +1,19 @@
+<!--pages/movie/detail/components/awards-info/awards-info.wxml-->
+<view class="awards-info">
+	<view class="awards-content">
+		<view class="awards-item">
+			<view class="title">获奖</view>
+			<view class="score">66<text class="normal">次</text></view>
+		</view>
+
+		<view class="awards-item">
+			<view class="title">提名</view>
+			<view class="score">69<text class="normal">次</text></view>
+		</view>
+
+		<view class="awards-item">
+			<view class="title">最佳艺术指导</view>
+			<view class="score">第89届奥斯卡金像奖（提名）</view>
+		</view>
+	</view>
+</view>

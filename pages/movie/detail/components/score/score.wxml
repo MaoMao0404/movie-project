@@ -1,0 +1,36 @@
+<!--pages/movie/detail/components/score/score.wxml-->
+<view class="score">
+	<view class="score-content">
+		<!-- 想看 -->
+		<view class="item" wx:if="{{isWatch==false}}">
+			<image class="img" src="/images//moviedetail-icon/xihuan.png" mode=""/>
+			<view>想看</view>
+		</view>
+
+		<view class="item isActive" wx:if="{{isWatch==true}}">
+			<image class="img" src="/images/moviedetail-icon/yixihuan.png" mode=""/>
+			<view>已想看</view>
+		</view>
+		<!-- 评分 -->
+		<view class="item" wx:if="{{isScore==false}}">
+			<image class="img" src="/images/moviedetail-icon/pingfen.png" mode=""/>
+			<view>评分</view>
+		</view>
+
+		<view class="item isActive" wx:if="{{isScore==true}}">
+			<image class="img" src="/images/moviedetail-icon/yipingfen.png" mode=""/>
+			<view>已评分</view>
+		</view>
+
+		<!-- 收藏 -->
+		<view class="item" wx:if="{{isCollect==false}}">
+			<image class="img" src="/images/moviedetail-icon/shoucang.png" mode=""/>
+			<view>收藏</view>
+		</view>
+
+		<view class="item isActive" wx:if="{{isCollect==true}}">
+			<image class="img" src="/images/moviedetail-icon/yishoucang.png" mode=""/>
+			<view>已收藏</view>
+		</view>
+	</view>
+</view>

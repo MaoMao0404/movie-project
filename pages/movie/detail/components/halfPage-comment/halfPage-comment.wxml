@@ -1,0 +1,9 @@
+<!--pages/movie/detail/components/halfPage-comment/halfPage-comment.wxml-->
+<mp-half-screen-dialog extClass="half-comment" show="{{isCommentShow}}" closabled bindcloseComment="closeComment">
+		<view slot="title">
+      <text>全部评论</text>
+    </view>
+		<view slot='desc'>
+			1111111111111111111
+		</view>
+</mp-half-screen-dialog>

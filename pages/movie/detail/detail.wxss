@@ -1,0 +1,67 @@
+/* pages/movie/detail/detail.wxss */
+@import '/static/style/icon.wxss';
+.introduction {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+.brief {
+	line-height: 1.6;
+	font-size: 28rpx;
+	text-overflow: -o-ellipsis-lastline;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	line-clamp: 4;
+	-webkit-box-orient: vertical;
+	white-space: normal;
+}
+
+.home-rowlist {
+	margin-right: 25rpx;
+}
+
+/* 半屏弹窗 */
+.half-brief{
+	position: fixed;
+	bottom: 0rpx;
+}
+.half-comment{
+	position: fixed;
+	bottom: 0rpx;
+}
+
+.weui-half-screen-dialog {
+	max-height: 100% !important;
+	top: 4%;
+}
+
+.weui-half-screen-dialog__ft {
+	display: none;
+}
+
+/* 评论底框 */
+.comment .comment-publish{
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: fixed;
+	bottom: 0;
+	width: 710rpx;
+	height: 78rpx;
+	padding: 0 30rpx;
+	border-top: 1px solid var(--color-line);
+	color: var(--color-text-second);
+}
+.comment-publish .tip{
+	box-sizing: border-box;
+	padding: 0 400rpx 0 30rpx;
+	background-color: var(--backgroundColor-movie);
+	border-radius: var(--border-radius-all);
+}
+.comment .commenticon{
+	font-size: 50rpx;
+}

@@ -1,0 +1,17 @@
+/* pages/movie/detail/components/label/label.wxss */
+.label-list {
+	margin: 30rpx -12rpx 0;
+}
+
+.label-item {
+	display: inline-block;
+	margin: 12rpx 12rpx 0 12rpx;
+	padding: 0 24rpx;
+	height: 60rpx;
+	line-height: 56rpx;
+	/* border: 2px solid var(--color-text-main); */
+	border-radius: 40rpx;
+	color: var(--color-text-main);
+	font-weight: var(--weight-font-main);
+	background-color: var(--backgroundColor-movie);
+}

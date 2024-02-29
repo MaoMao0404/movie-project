@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "score":"/pages/movie/detail/components/score/score",
+    "rating-info":"/pages/movie/detail/components/rating-info/rating-info",
+    "label":"/pages/movie/detail/components/label/label",
+    "halfPage-brief":"/pages/movie/detail/components/halfPage-brief/halfPage-brief",
+    "halfPage-collect":"/pages/movie/detail/components/halfPage-collect/halfPage-collect",
+    "halfPage-score":"/pages/movie/detail/components/halfPage-score/halfPage-score",
+    "halfPage-comment":"/pages/movie/detail/components/halfPage-comment/halfPage-comment",
+    "picture-list":"/pages/movie/detail/components/picture-list/picture-list"
+  },
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#fff"
+}

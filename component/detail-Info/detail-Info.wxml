@@ -1,0 +1,12 @@
+<!--component/detail-Info/detail-Info.wxml-->
+<view class="detail-Info">
+	<view class="detail-Infocontent">
+		<image class="img" src="/images/logo.png" mode="aspectFill"/>
+		<view class="text">
+			<view class="title">命运石之门</view>
+			<view class="subtitle">La La land</view>
+			<view class="genre">剧情 歌舞 爱情</view>
+			<view class="country">美国 2016</view>
+		</view>
+	</view>
+</view>

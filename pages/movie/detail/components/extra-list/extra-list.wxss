@@ -1,0 +1,26 @@
+/* pages/movie/detail/components/extra-list/extra-list.wxss */
+.movie-extra {
+	white-space: nowrap;
+	padding: 20rpx 10rpx;
+	background-color: var(--backgroundColor-movie);
+	border-radius: var(--border-radius-all);
+}
+
+.extra-item {
+	margin: 0 20rpx;
+	display: flex;
+	justify-content: space-between;
+	height: 70rpx;
+	line-height: 70rpx;
+}
+
+.extra-name {
+	font-weight: bold;
+	font-size: 28rpx;
+	color: var(--color-text-main);
+}
+
+.extra-label {
+	font-size: 26rpx;
+	color: var(--color-text-second);
+}	

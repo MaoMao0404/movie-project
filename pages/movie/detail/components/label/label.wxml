@@ -1,0 +1,4 @@
+<!--pages/movie/detail/components/label/label.wxml-->
+<view class="label-list">
+	<view class="label-item">剧情</view>
+</view>

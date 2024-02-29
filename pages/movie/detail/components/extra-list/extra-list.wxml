@@ -1,0 +1,34 @@
+<!--pages/movie/detail/components/extra-list/extra-list.wxml-->
+<view class="movie-extra">
+
+	<!-- 上映日期 -->
+	<view class="extra-item">
+		<view class="extra-name">上映日期</view>
+		<view class="extra-label" data-type="pubdate" bindtap="pathTo">14></view>
+	</view>
+
+	<!-- 家长引导 -->
+	<view class="extra-item" >
+		<view class="extra-name">家长引导</view>
+		<view class="extra-label" data-type="level" bindtap="pathTo">14></view>
+	</view>
+
+
+	<!-- 经典台词 -->
+	<view class="extra-item" >
+		<view class="extra-name">经典台词</view>
+		<view class="extra-label" data-type="dialogue" bindtap="pathTo">14></view>
+	</view>
+
+	<!-- 幕后知识 -->
+	<view class="extra-item" >
+		<view class="extra-name">幕后知识</view>
+		<view class="extra-label" data-type="knowledge" bindtap="pathTo">14></view>
+	</view>
+
+	<!-- 制作发行 -->
+	<view class="extra-item">
+		<view class="extra-name">制作发行</view>
+		<view class="extra-label" data-type="company" bindtap="pathTo">14></view>
+	</view>
+</view>

@@ -1,0 +1,29 @@
+/* pages/movie/detail/components/rating-info/rating-info.wxss */
+.rating-info{
+	margin-top: 40rpx;
+}
+.rating-content{
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	height:200rpx;
+	background-color: var(--backgroundColor-movie);
+	border-radius:10rpx;
+	text-align: center;
+}
+.rating-content .rating-item{
+	flex:1;
+	color: var(--color-text-main);
+}
+.rating-content .rating-item .title{
+	font-weight:550;
+	margin-bottom: 20rpx;
+}
+.rating-content .rating-item .score{
+	font-size: 55rpx;
+	font-weight:700;
+}
+.rating-content .rating-item .normal{
+	font-size: 30rpx;
+	font-weight: 500;
+}

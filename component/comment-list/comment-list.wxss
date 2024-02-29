@@ -1,0 +1,68 @@
+@import '/static/style/icon.wxss';
+.comment-item {
+	padding: 10rpx 0;
+	margin: 0 20rpx;
+	position: relative;
+}
+
+.comment-header {
+	display: flex;
+	align-items: center;
+	height: 60rpx;
+
+}
+
+.author-avatar {
+	width: 60rpx;
+	height: 60rpx;
+	border-radius: 50%;
+	background: #f7f7f7;
+}
+
+.author-info {
+	display: flex;
+	margin-left: 20rpx;
+	flex: 1;
+}
+
+.author-name {
+	font-size: 24rpx;
+	color: var(--color-text-main);
+}
+
+.comment-content {
+	font-size: 28rpx;
+	padding: 12rpx 0 4rpx 70rpx;
+	line-height: 44rpx;
+	color: var(--color-text-main);
+	word-break: break-all;
+}
+
+.is-delete {
+	display: inline-block;
+	padding: 0 12rpx;
+	background-color: #f5f5f5;
+	font-size: 24rpx;
+	border-radius: 6rpx;
+	color: var(--color-text-second);
+}
+
+.comment-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12rpx 0 0 70rpx;
+	height: 44rpx;
+	color: var(--color-text-second);
+	font-size: 24rpx;
+}
+
+.like{
+	color: red;
+}
+
+.clear{
+	margin: 18rpx 0;
+	height: 2rpx;
+	background-color: rgb(238, 238, 238);
+}

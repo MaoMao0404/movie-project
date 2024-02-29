@@ -1,0 +1,21 @@
+<!--component/comment-list/comment-list.wxml-->
+<view class="comment-item">
+    <view class="comment-header">
+        <image class="author-avatar" lazy-load src="/images/logo.png" />
+        <view class="author-info">
+            <view class="author-name">爆米花</view>
+        </view>
+    </view>
+
+    <view wx:if="{{comment.is_delete}}" class="comment-content">
+        <view class="is-delete">评论已被删除</view>
+    </view>
+
+    <view wx:else class="comment-content">喜欢！！！</view>
+
+    <view class="comment-footer">
+        <view class="comment-date">2024-2-26</view>
+				<view class="{{isLike ? 'like': ''}} iconfont icon-dianzan" bindtap="likeComment"></view>
+    </view>
+		<view class="clear"></view>
+</view>

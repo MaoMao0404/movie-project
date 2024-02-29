@@ -1,0 +1,28 @@
+/* pages/movie/detail/components/score/score.wxss */
+.score{
+	margin-top: 36rpx;
+}
+.score-content{
+	display: flex;
+	justify-content: space-between;
+	height: 60rpx;
+}
+.score-content .item{
+	display: flex;
+	width: 200rpx;
+	height: 100%;
+	border: 2rpx solid var(--color-border-main);
+	border-radius: 50rpx;
+	justify-content: center;
+	align-items: center;
+	color: var(--color-text-main);
+}
+.score-content .img{
+	width: 40rpx;
+	height: 40rpx;
+	margin-right: 20rpx;
+}
+.isActive{
+	color: white!important;
+	background-color: var(--backgroundColor-main);
+}

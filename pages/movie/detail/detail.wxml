@@ -1,0 +1,72 @@
+<!--pages/movie/detail/detail.wxml-->
+
+<!-- 电影标签：介绍基本信息 -->
+<detail-Info></detail-Info>
+
+<!-- 想看 评分 -->
+<score></score>
+
+<!-- tabbar栏 -->
+<top-tabbar typeList="{{typeList}}" type="{{type}}" bindcheckType="checkType"></top-tabbar>
+
+<!-- 电影简介 -->
+<view class="introduction" wx:if="{{type=='introduction'}}">
+	<!-- 豆瓣评分及评分人数 -->
+	<rating-info></rating-info>
+	<!-- 标签 -->
+	<label></label>
+	<!-- 基本剧情 -->
+	<panel title="基本剧情" scroll-x="{{false}}" subtitle=" " bindopenBrief="openBrief">
+		<view class="brief" bindtap="openBrief">	
+			人声鼎沸的西班牙斗牛场中，孔武健壮的斗牛士安东尼奥（丹尼尔·吉梅内斯·卡乔 Daniel Giménez Cacho 饰）正在进行一场关键赛事。看台上，他正怀有身孕的美丽妻子卡门（茵玛·库艾斯塔 Inma Cuesta 饰）紧张地注视着眼前的一切。然而意外发生，安东尼奥被公牛顶成重伤，深受惊吓的卡门在产下一女后撒手人寰。住院期间，别有心计的护士因卡娜（玛丽贝尔·瓦度 Maribel Verdú 饰）细心呵护安东尼奥，而她日后也成为这名残疾斗牛士的新一任妻子。自幼远离父亲生活的小卡门辗转回到安东尼奥的豪宅，可是却遭到因卡娜的残酷虐待。命运多舛的卡门（玛卡莲娜·加西亚 Macarena García 饰）日渐长大，容貌出众，但心狠手辣的继母是可要将她置于死地……
+		</view>
+	</panel>
+	<!-- 基本剧情半屏弹窗 -->
+	<halfPage-brief isBriefShow="{{isBriefShow}}" bindcloseBrief="closeBrief"></halfPage-brief>
+	<!-- 演员表 -->
+	<panel title="演员表" subtitle="14" to="">
+		<row-list class="home-rowlist"></row-list>
+	</panel>
+	
+</view>
+
+
+<!-- 电影资料 -->
+<view class="information" wx:if="{{type=='information'}}">
+	<!-- 视频 -->
+	<panel title="视频" subtitle="14" to="">
+		<row-list class="home-rowlist"></row-list>
+	</panel>
+	<!-- 奖项 -->
+	<panel title="奖项" subtitle="14" to="">
+		
+	</panel>
+	<!-- 资料 -->
+	<panel title="资料" subtitle="14" to="">
+		
+	</panel>
+	<!-- 相册 -->
+	<panel title="相册" subtitle="14" to="">
+		<picture-list class="home-rowlist"></picture-list>
+	</panel>
+	<!-- 系列影视 -->
+	<panel title="系列影视" subtitle="14" to="">
+		<row-list class="home-rowlist"></row-list>
+	</panel>
+	<!-- 相似影视 -->
+	<panel title="相似影视" subtitle="14" to="">
+		<row-list class="home-rowlist"></row-list>
+	</panel>
+</view>
+
+<!-- 经典影评 -->
+<view class="comment" wx:if="{{type=='comment'}}">
+	<article></article>
+	<view class="comment-publish" bindtap="openComment">
+		<view class="tip">发表评论...</view>
+		<text class="commenticon iconfont icon-pinglun1"></text>
+	</view>
+	<halfPage-comment isCommentShow="{{isCommentShow}}" bindcloseComment="closeComment"></halfPage-comment>
+</view>
+
+<footer></footer>

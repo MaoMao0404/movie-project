@@ -1,0 +1,45 @@
+/* component/detail-Info/detail-Info.wxss */
+.detail-Info{
+	box-sizing: border-box;
+	margin-top: 60rpx;
+	margin-bottom: 20rpx;
+}
+.detail-Infocontent{
+	position: relative;
+	box-sizing: border-box;
+	height: 270rpx;
+	background-color: rgba(192, 185, 224, 0.212);
+	border-radius:var(--border-radius-all);
+}
+.detail-Infocontent .img{
+	position: absolute;
+	left: 40rpx;
+	bottom: 30rpx;
+	width: 192rpx;
+	height: 268rpx;
+	border-radius: 10rpx;
+	box-shadow: var(--shadow-all);
+}
+.detail-Infocontent .text{
+	position: absolute;
+	bottom: 30rpx;
+	left: 270rpx;
+	color: var(--color-text-main);
+	font-size: 28rpx;
+}
+.detail-Infocontent .text .title{
+	color: var(--color-text-main);
+	font-size: 34rpx;
+	font-weight: var(--weight-font-main);
+}
+.text .subtitle{
+	margin-bottom: 15rpx;
+	color: var(--color-text-end);
+	font-weight: normal;
+	font-size: 28rpx;
+}
+.text .genre{
+	margin-bottom: 10rpx;
+}
+
+

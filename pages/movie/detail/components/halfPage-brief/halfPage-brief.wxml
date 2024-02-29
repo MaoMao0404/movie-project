@@ -1,0 +1,76 @@
+<!--pages/movie/detail/components/halfPage-brief/halfPage-brief.wxml-->
+<!-- 基本剧情半屏弹窗 -->
+<mp-half-screen-dialog extClass="half-brief" show="{{isBriefShow}}" closabled bindclose="closeBrief" catchtouchmove="ture">
+		<view slot="title">
+      <text>基本信息</text>
+    </view>
+		<view slot='desc'>
+			<view class="detail-main">
+				<view class="detail-content">
+					<view class="item">
+						<view class="label">片名：</view>
+						<view class="value"></view>
+					</view>
+					<view class="item">
+						<view class="label">原名：</view>
+						<view class="value">
+							<text></text>
+						</view>
+					</view>
+					<view class="item">
+						<view class="label">别名：</view>
+						<view class="value">
+							<text></text>
+						</view>
+					</view>
+					<view class="item">
+						<view class="label">类别：</view>
+						<view class="value"></view>
+					</view>
+					<view class="item">
+						<view class="label">类型：</view>
+						<view class="value"></view>
+					</view>
+					<view class="item">
+						<view class="label">上映：</view>
+						<view class="value"></view>
+					</view>
+					<view class="item" >
+						<view class="label">季数：</view>
+						<view class="value">第  季</view>
+					</view>
+					<view class="item" >
+						<view class="label">集数：</view>
+						<view class="value">共  集</view>
+					</view>
+					<view class="item">
+						<view class="label">片长：</view>
+						<view class="value">
+							分钟
+						</view>
+					</view>
+					<view class="item">
+						<view class="label">地区：</view>
+						<view class="value"></view>
+					</view>
+					<view class="item">
+						<view class="label">色彩：</view>
+						<view class="value"></view>
+					</view>
+					<view class="item">
+						<view class="label">语言：</view>
+						<view class="value"></view>
+					</view>
+				</view>
+				<view class="detail-content">
+					<view class="detail-header">
+						<view class="detail-title">简介</view>
+					</view>
+					<view class="summary">
+						<rich-text/>
+						<view class="no-summary">暂无简介</view>
+					</view>
+				</view>
+  		</view>
+		</view>
+</mp-half-screen-dialog>
