@@ -1,0 +1,12 @@
+<!--pages/movie/detail/components/actor-rowlist/actor-rowlist.wxml-->
+<view class="actor-row">
+  <view class="actor-row__poster">
+		<image class="poster" mode="aspectFill" lazy-load src="{{actor.avatar}}"/>
+	</view>
+
+  <view class="actor-row__title">{{actor.name}}</view>
+  <view class="profession">
+		<text wx:if="{{actor.profession=='导演'}}">{{actor.profession}}</text>
+		<text wx:else>{{actor.act}}</text>
+	</view>
+</view>

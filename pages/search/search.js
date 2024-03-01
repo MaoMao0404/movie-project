@@ -9,7 +9,7 @@ Page({
     // 搜索关键字
     keyword:"",
     // 历史记录
-    historyList:['钢铁侠','热辣滚烫','贾玲'],
+    historyList:[],
     // tabbar栏
     typeList:[
       {type:'movie',title:'影视'},
@@ -149,12 +149,54 @@ Page({
     })
     this.getSearch()
   },
-  
+  // 添加历史记录
+  addHistory(e){
+    const keyword = e.detail
+    if (!keyword) return;
+    this.getHistoryList();
+    let historyList = this.data.historyList
+
+    if (!historyList.includes(keyword)) {
+
+      // 历史记录大于20则
+      if (historyList.length > 20) {
+        historyList.pop();
+        this.setData({
+          historyList
+        })
+      }
+      historyList.unshift(keyword);
+      this.setData({
+        historyList
+      })
+      try {
+        wx.setStorageSync('historyList', JSON.stringify(historyList))
+      } catch (e) { }
+    }
+  }, 
+  // 获取历史记录
+  getHistoryList() {
+    const historyList = wx.getStorageSync('historyList');
+    if (historyList) {
+      try {
+        this.setData({
+          historyList: JSON.parse(historyList)
+        })
+      } catch (e) {
+
+      }
+    } else {
+      this.setData({
+        historyList: []
+      })
+    }
+  }, 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
     this.getSearch()
+    this.getHistoryList()
   },
 
   /**

@@ -1,0 +1,5 @@
+<!--component/video-rowlist/video-rowlist.wxml-->
+<view class="video-item">
+    <image mode="aspectFill" class="video-poster" lazy-load src="{{video.poster}}" />
+    <view class="video-footer">{{ video.title }}</view>
+</view>

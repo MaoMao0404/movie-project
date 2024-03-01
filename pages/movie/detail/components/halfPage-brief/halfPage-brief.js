@@ -8,6 +8,10 @@ Component({
     isBriefShow:{
       type:Boolean,
       value:false
+    },
+    movie:{
+      type:Object,
+      value:{}
     }
   },
 

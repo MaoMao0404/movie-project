@@ -22,6 +22,13 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    pathTo(e){
+      const id = e.currentTarget.dataset.id
+      const title = e.currentTarget.dataset.title
+      this.triggerEvent('addHistory',title)
+      wx.navigateTo({
+        url: `/pages/movie/detail/detail?id=${id}`
+      })
+    }
   }
 })

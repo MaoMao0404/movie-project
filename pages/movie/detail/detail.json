@@ -2,13 +2,17 @@
   "usingComponents": {
     "score":"/pages/movie/detail/components/score/score",
     "rating-info":"/pages/movie/detail/components/rating-info/rating-info",
+    "actor-rowlist":"/pages/movie/detail/components/actor-rowlist/actor-rowlist",
+    "serial-rowlist":"/pages/movie/detail/components/serial-rowlist/serial-rowlist",
+    "awards-info":"/pages/movie/detail/components/awards-info/awards-info",
+    "extra-list":"/pages/movie/detail/components/extra-list/extra-list",
     "label":"/pages/movie/detail/components/label/label",
     "halfPage-brief":"/pages/movie/detail/components/halfPage-brief/halfPage-brief",
-    "halfPage-collect":"/pages/movie/detail/components/halfPage-collect/halfPage-collect",
     "halfPage-score":"/pages/movie/detail/components/halfPage-score/halfPage-score",
     "halfPage-comment":"/pages/movie/detail/components/halfPage-comment/halfPage-comment",
     "picture-list":"/pages/movie/detail/components/picture-list/picture-list"
   },
   "navigationBarTextStyle": "black",
-  "navigationBarBackgroundColor": "#fff"
+  "navigationBarBackgroundColor": "#fff",
+  "onReachBottomDistance": 50
 }

@@ -2,21 +2,21 @@
 <view class="title">热门分类</view>
 <view class='nav-wrapper'>
   <view class="history">
-    <image class="img-history" src="/images/icon/rili.png" mode=""/>
+    <image class="img-history" src="/images/homeicon/rili.png" mode=""/>
     <view>那年今日</view>
   </view>
   <view class="else">
     <view class="hot">
-      <image class="img" src="/images/icon/reying.png" mode=""/>
+      <image class="img" src="/images/homeicon/reying.png" mode=""/>
       <view>正在热映</view>
     </view>
     <view class="bottom">
       <view class="small">
-        <image class="img" src="/images/icon/liangdian.png" mode=""/>
+        <image class="img" src="/images/homeicon/liangdian.png" mode=""/>
         <view>高分</view>
       </view>
       <view class="small">
-        <image class="img" src="/images/icon/link.png" mode=""/>
+        <image class="img" src="/images/homeicon/link.png" mode=""/>
         <view>奖项</view>
       </view>
     </view>

@@ -28,8 +28,8 @@
 	<view class="video-footer">
 		<!-- 作者信息 -->
     <view class="video-author" catchtap="pathToAuthor">
-      <image class='author-avatar' src='{{video.author.avatar}}' />
-      <view class="author-name">{{video.author.username}}</view>
+      <image class='author-avatar' src='/images/logo.png' mode="aspectFit" />
+      <view class="author-name">爆米花</view>
     </view>
 		<!-- 空白区域分割 -->
     <view class="space"></view>

@@ -1,10 +1,12 @@
 <!--pages/movie/detail/detail.wxml-->
 
 <!-- 电影标签：介绍基本信息 -->
-<detail-Info></detail-Info>
+<detail-Info movie="{{movie}}"></detail-Info>
 
 <!-- 想看 评分 -->
-<score></score>
+<score release_status="{{movie.release_status}}" isWatch="{{isWatch}}" isScore="{{isScore}}" isCollect="{{isCollect}}" bindopenScore="openScore" binduserWish="userWish" binduserCollect="userCollect" bindDeleteuserCollect="DeleteuserCollect"></score>
+<!-- 评分半屏弹窗 -->
+<halfPage-score score="{{myrating}}" comment="{{comment}}" isScoreShow="{{isScoreShow}}" bindcloseScore="closeScore" bindcreateMovieRating="createMovieRating" isScore="{{isScore}}"></halfPage-score>
 
 <!-- tabbar栏 -->
 <top-tabbar typeList="{{typeList}}" type="{{type}}" bindcheckType="checkType"></top-tabbar>
@@ -12,20 +14,20 @@
 <!-- 电影简介 -->
 <view class="introduction" wx:if="{{type=='introduction'}}">
 	<!-- 豆瓣评分及评分人数 -->
-	<rating-info></rating-info>
+	<rating-info ratingInfo="{{movie.thrid_rating.douban}}"></rating-info>
 	<!-- 标签 -->
-	<label></label>
+	<label tags="{{movie.tags}}"></label>
 	<!-- 基本剧情 -->
 	<panel title="基本剧情" scroll-x="{{false}}" subtitle=" " bindopenBrief="openBrief">
 		<view class="brief" bindtap="openBrief">	
-			人声鼎沸的西班牙斗牛场中，孔武健壮的斗牛士安东尼奥（丹尼尔·吉梅内斯·卡乔 Daniel Giménez Cacho 饰）正在进行一场关键赛事。看台上，他正怀有身孕的美丽妻子卡门（茵玛·库艾斯塔 Inma Cuesta 饰）紧张地注视着眼前的一切。然而意外发生，安东尼奥被公牛顶成重伤，深受惊吓的卡门在产下一女后撒手人寰。住院期间，别有心计的护士因卡娜（玛丽贝尔·瓦度 Maribel Verdú 饰）细心呵护安东尼奥，而她日后也成为这名残疾斗牛士的新一任妻子。自幼远离父亲生活的小卡门辗转回到安东尼奥的豪宅，可是却遭到因卡娜的残酷虐待。命运多舛的卡门（玛卡莲娜·加西亚 Macarena García 饰）日渐长大，容貌出众，但心狠手辣的继母是可要将她置于死地……
+			{{movie.summary}}
 		</view>
 	</panel>
 	<!-- 基本剧情半屏弹窗 -->
-	<halfPage-brief isBriefShow="{{isBriefShow}}" bindcloseBrief="closeBrief"></halfPage-brief>
+	<halfPage-brief movie="{{movie}}" isBriefShow="{{isBriefShow}}" bindcloseBrief="closeBrief"></halfPage-brief>
 	<!-- 演员表 -->
-	<panel title="演员表" subtitle="14" to="">
-		<row-list class="home-rowlist"></row-list>
+	<panel title="演员表" subtitle="{{movie.cast_count}}" to="" wx:if="{{movie.cast_count}}">
+		<actor-rowlist class="home-rowlist" wx:for="{{movie.cast}}" wx:key="index" actor="{{item}}"></actor-rowlist>
 	</panel>
 	
 </view>
@@ -34,38 +36,50 @@
 <!-- 电影资料 -->
 <view class="information" wx:if="{{type=='information'}}">
 	<!-- 视频 -->
-	<panel title="视频" subtitle="14" to="">
-		<row-list class="home-rowlist"></row-list>
+	<panel title="视频" subtitle="{{movie.video_count}}" to="" wx:if="{{movie.video_count}}">
+		<video-rowlist wx:for="{{movie.videos}}" wx:key="id" video="{{item}}"></video-rowlist>
 	</panel>
 	<!-- 奖项 -->
-	<panel title="奖项" subtitle="14" to="">
-		
+	<panel title="奖项" subtitle="{{movie.awards_total_count}}" to="" wx:if="{{movie.awards_total_count}}">
+		<awards-info movie="{{movie}}" award="{{movie.awards[0].children[0]}}"></awards-info>
 	</panel>
 	<!-- 资料 -->
-	<panel title="资料" subtitle="14" to="">
-		
+	<panel title="资料">
+		<extra-list movie="{{movie}}"></extra-list>
 	</panel>
 	<!-- 相册 -->
-	<panel title="相册" subtitle="14" to="">
-		<picture-list class="home-rowlist"></picture-list>
+	<panel title="相册" subtitle="{{movie.photo_count}}" to="" wx:if="{{movie.photo_count}}">
+		<picture-list class="home-rowlist" wx:for="{{movie.photos}}" wx:key="id" picture="{{item}}"></picture-list>
 	</panel>
+
 	<!-- 系列影视 -->
-	<panel title="系列影视" subtitle="14" to="">
-		<row-list class="home-rowlist"></row-list>
+	<panel title="系列影视" subtitle="{{movie.serial_count}}" to="" wx:if="{{movie.serial_count}}">
+		<serial-rowlist class="home-rowlist" wx:for="{{movie.serials}}" wx:key="id" serial="{{item}}"></serial-rowlist>
 	</panel>
+
 	<!-- 相似影视 -->
-	<panel title="相似影视" subtitle="14" to="">
-		<row-list class="home-rowlist"></row-list>
+	<panel title="相似影视" subtitle="{{movie.like_movies.length}}" to="" wx:if="{{movie.like_movies.length}}">
+		<row-list class="home-rowlist" wx:for="{{movie.like_movies}}" wx:key="id" movie="{{item}}"></row-list>
 	</panel>
 </view>
 
 <!-- 经典影评 -->
 <view class="comment" wx:if="{{type=='comment'}}">
-	<article></article>
+	<!-- 经典影评列表 -->
+	<article wx:for="{{movieReviewList}}" wx:key="id" article="{{item}}"></article>
+	<!-- loading框 -->
+	<loading isShow="{{isLoading}}"></loading>
+	<!-- 返回顶部 -->
+	<return-top isShow="{{isTop}}"></return-top>
+	<!-- 是否有更多数据 -->
+	<more isMore="{{isMore}}"></more>
+	
+	<!-- 底部评论框 -->
 	<view class="comment-publish" bindtap="openComment">
 		<view class="tip">发表评论...</view>
 		<text class="commenticon iconfont icon-pinglun1"></text>
 	</view>
+	<!-- 电影评论半屏页面 -->
 	<halfPage-comment isCommentShow="{{isCommentShow}}" bindcloseComment="closeComment"></halfPage-comment>
 </view>
 

@@ -13,7 +13,7 @@
 	<!-- tabbar栏 -->
 	<top-tabbar typeList="{{typeList}}" bindcheckType="checkType" type="{{type}}"></top-tabbar>
 	<!-- 影视内容 -->
-	<movie-list wx:if="{{type=='movie'}}" movieList="{{movieList}}"></movie-list>
+	<movie-list wx:if="{{type=='movie'}}" movieList="{{movieList}}" bindaddHistory="addHistory"></movie-list>
 	<!-- 演员内容 -->
 	<actor-list wx:else actorList="{{actorList}}"></actor-list>
 

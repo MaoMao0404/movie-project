@@ -8,7 +8,7 @@
 </view>
 
 <!-- 轮播图 -->
-<swiper indicator-dots 	indicator-color="#fff" indicator-active-color="#8a8a8a" autoplay circular >
+<swiper indicator-dots 	indicator-color="#8a8a8a" indicator-active-color="#fff" autoplay circular >
 	<swiper-item wx:for="{{swiper}}" wx:key="id">
 		<image src="{{item.banner}}" mode="heightFix" />
 	</swiper-item>

@@ -4,7 +4,6 @@
 	margin-top: 65rpx;
 }
 .movie-listcontent{
-	box-sizing: border-box;
 	display: flex;
 	justify-content: space-between;
 	height: 170rpx;

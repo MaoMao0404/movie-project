@@ -34,5 +34,9 @@ Component({
         }
       }
     },
+    // 详情页中基本剧情打开半屏页
+    openBrief(){
+      this.triggerEvent('openBrief')
+    }
   }
 })

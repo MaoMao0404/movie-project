@@ -57,7 +57,7 @@
 	box-sizing: border-box;
 	width: 170rpx;
 	height: 145rpx;
-	padding-top:20rpx;
+	padding-top:10rpx;
 	margin-top: 6rpx;
 	border: 2px solid var(--color-border-main);
 	border-radius: var(--border-radius-all);

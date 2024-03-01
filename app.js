@@ -1,11 +1,21 @@
 // app.js
+import { createUserFavorite } from "./api/index/movie";
 App({
+  // 创建默认收藏夹
+  async createUserFavorite(){
+    let userFavoriteId = wx.getStorageSync('userFavoriteId')
+    if (userFavoriteId) {
+      this.globalData.userFavoriteId=userFavoriteId
+    }else{
+      const {code,data} = await createUserFavorite({name:'默认收藏夹'})
+      if (code==200) {
+        wx.setStorageSync('userFavoriteId', data.id)
+        this.globalData.userFavoriteId=data.id
+      }
+    }
+  },
   onLaunch() {
-    // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
+    this.createUserFavorite()
     // 登录
     wx.login({
       success: res => {
@@ -14,6 +24,9 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    // 用户信息
+    userInfo: null,
+    // 用户默认收藏夹id
+    userFavoriteId:null
   }
 })

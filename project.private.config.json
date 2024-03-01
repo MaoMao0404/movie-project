@@ -9,13 +9,14 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/search/search",
-          "pathName": "pages/search/search",
+          "name": "pages/movie/detail/detail",
+          "pathName": "pages/movie/detail/detail",
           "query": "",
           "launchMode": "default",
           "scene": null
         }
       ]
     }
-  }
+  },
+  "libVersion": "3.3.0"
 }

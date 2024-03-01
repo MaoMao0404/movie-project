@@ -1,9 +1,15 @@
 <!--pages/movie/detail/components/halfPage-comment/halfPage-comment.wxml-->
-<mp-half-screen-dialog extClass="half-comment" show="{{isCommentShow}}" closabled bindcloseComment="closeComment">
-		<view slot="title">
-      <text>全部评论</text>
-    </view>
-		<view slot='desc'>
-			1111111111111111111
+<mp-half-screen-dialog extClass="half-comment" show="{{isCommentShow}}" closabled bindclose="closeComment">
+	<view slot="title">
+		<text>全部评论</text>
+	</view>
+	<view slot='desc'>
+		<comment-list></comment-list>
+		<comment-list></comment-list>
+		<comment-list></comment-list>
+		<view class="my-comment">
+			<textarea class="textarea" placeholder="快来谈一谈吧！" value="{{comment}}" bindinput="commentChange" maxlength="-1"/>
+			<view class="button">发布</view>
 		</view>
+	</view>
 </mp-half-screen-dialog>

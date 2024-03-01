@@ -32,6 +32,10 @@
 	position: fixed;
 	bottom: 0rpx;
 }
+.half-score{
+	position: fixed;
+	bottom: 0rpx;
+}
 
 .weui-half-screen-dialog {
 	max-height: 100% !important;
@@ -55,6 +59,7 @@
 	padding: 0 30rpx;
 	border-top: 1px solid var(--color-line);
 	color: var(--color-text-second);
+	background-color: #fff;
 }
 .comment-publish .tip{
 	box-sizing: border-box;

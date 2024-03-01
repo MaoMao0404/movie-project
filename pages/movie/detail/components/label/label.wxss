@@ -12,6 +12,5 @@
 	/* border: 2px solid var(--color-text-main); */
 	border-radius: 40rpx;
 	color: var(--color-text-main);
-	font-weight: var(--weight-font-main);
 	background-color: var(--backgroundColor-movie);
 }

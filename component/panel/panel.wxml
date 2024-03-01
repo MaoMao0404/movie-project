@@ -4,7 +4,7 @@
     <view class="panel-title">{{ title }}</view>
 
     <view class="panel-more" bindtap="pathTo">
-			<text class="subtitle" wx:if="{{subtitle}}">{{ subtitle }}></text>
+			<text class="subtitle" wx:if="{{subtitle}}" bindtap="openBrief">{{ subtitle }}></text>
     </view>
   </view>
 

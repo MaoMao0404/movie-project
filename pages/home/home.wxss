@@ -25,7 +25,7 @@
 swiper{
 	box-sizing: border-box;
 	height: 380rpx;
-	margin: 50rpx 0;
+	margin: 60rpx 0;
 }
 swiper-item{
 	width: 710rpx;

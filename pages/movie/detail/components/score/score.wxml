@@ -2,33 +2,39 @@
 <view class="score">
 	<view class="score-content">
 		<!-- 想看 -->
-		<view class="item" wx:if="{{isWatch==false}}">
+		<view class="item" wx:if="{{isWatch==false}}" bindtap="createOrDeleteMovieWish">
 			<image class="img" src="/images//moviedetail-icon/xihuan.png" mode=""/>
 			<view>想看</view>
 		</view>
 
-		<view class="item isActive" wx:if="{{isWatch==true}}">
+		<view class="item isActive" wx:if="{{isWatch==true}}" bindtap="createOrDeleteMovieWish">
 			<image class="img" src="/images/moviedetail-icon/yixihuan.png" mode=""/>
 			<view>已想看</view>
 		</view>
 		<!-- 评分 -->
-		<view class="item" wx:if="{{isScore==false}}">
+		<view class="item coming" wx:if="{{release_status==1}}">
+			<image class="img" src="/images/moviedetail-icon/pingfen.png" mode=""/>
+			<view>未上映</view>
+		</view>
+
+		<view class="item" wx:if="{{isScore==false&&release_status==0}}" bindtap="openScore">
 			<image class="img" src="/images/moviedetail-icon/pingfen.png" mode=""/>
 			<view>评分</view>
 		</view>
 
-		<view class="item isActive" wx:if="{{isScore==true}}">
+		<view class="item isActive" wx:if="{{isScore==true&&release_status==0}}" bindtap="openScore">
 			<image class="img" src="/images/moviedetail-icon/yipingfen.png" mode=""/>
 			<view>已评分</view>
 		</view>
+		
 
 		<!-- 收藏 -->
-		<view class="item" wx:if="{{isCollect==false}}">
+		<view class="item" wx:if="{{isCollect==false}}" bindtap="updateUserFavoriteMovie">
 			<image class="img" src="/images/moviedetail-icon/shoucang.png" mode=""/>
 			<view>收藏</view>
 		</view>
 
-		<view class="item isActive" wx:if="{{isCollect==true}}">
+		<view class="item isActive" wx:if="{{isCollect==true}}" bindtap="deleteUserFavoriteMovie">
 			<image class="img" src="/images/moviedetail-icon/yishoucang.png" mode=""/>
 			<view>已收藏</view>
 		</view>

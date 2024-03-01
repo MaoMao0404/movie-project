@@ -1,12 +1,17 @@
 <!--component/detail-Info/detail-Info.wxml-->
 <view class="detail-Info">
 	<view class="detail-Infocontent">
-		<image class="img" src="/images/logo.png" mode="aspectFill"/>
+		<image class="img" src="{{movie.poster.medium}}" mode="aspectFill"/>
 		<view class="text">
-			<view class="title">命运石之门</view>
-			<view class="subtitle">La La land</view>
-			<view class="genre">剧情 歌舞 爱情</view>
-			<view class="country">美国 2016</view>
+			<view class="title" wx:if="{{movie.title}}">{{movie.title}}</view>
+			<view class="subtitle" wx:if="{{movie.title_original}}">{{movie.title_original}}</view>
+			<view class="genre" wx:if="{{movie.genres}}">
+				<text wx:for="{{movie.genres}}" wx:key="index">{{item}} </text>
+			</view>
+			<view class="country">
+				<text wx:for="{{movie.countries}}" wx:key="index">{{item}} </text>
+				<text>{{movie.year}}</text>
+			</view>
 		</view>
 	</view>
 </view>

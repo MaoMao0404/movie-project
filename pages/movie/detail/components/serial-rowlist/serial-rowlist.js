@@ -1,17 +1,15 @@
-// component/row-list/row-list.js
+// pages/movie/detail/components/serial-rowlist/serial-rowlist.js
 Component({
-
   options:{
     styleIsolation:'isolated'
   },
-  
   /**
    * 组件的属性列表
    */
   properties: {
-    movie:{
+    serial:{
       type:Object,
-      required: true
+      value:{}
     }
   },
 
@@ -26,10 +24,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    pathTo(){
-      wx.navigateTo({
-        url: `/pages/movie/detail/detail?id=${this.properties.movie.id}`
-      })
-    }
+
   }
 })

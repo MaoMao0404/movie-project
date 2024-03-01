@@ -1,1 +1,28 @@
 /* pages/movie/detail/components/halfPage-score/halfPage-score.wxss */
+.my-comment{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 30rpx;
+	padding: 20rpx;
+	border: 2px solid rgb(238, 238, 238);
+	border-radius: 30rpx;
+}
+.my-comment .textarea{
+	width: 470rpx;
+	height: 200rpx;
+	margin-right: 20rpx;
+}
+.my-comment .button{
+	align-self:flex-end;
+	padding: 10rpx 30rpx;
+	background-color: #333;
+	border-radius: 40rpx;
+	color: white;
+}
+.score{
+	margin: 40rpx auto;
+	color: #333;
+	text-align: center;
+	font-size: 36rpx;
+	font-weight: 600;
+}

@@ -22,4 +22,7 @@ page{
 	--backgroundColor-movie:rgba(221, 221, 221, 0.3);
 	/* 阴影模糊 */
 	--shadow-all:2rpx 2rpx 20rpx 2rpx rgba(0, 0, 0, .3);
+
+	/* 分割线颜色 */
+	--color-line:rgb(238, 238, 238);
 }

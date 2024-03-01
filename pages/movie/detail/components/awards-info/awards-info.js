@@ -5,7 +5,14 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    award:{
+      type:Object,
+      value:{}
+    },
+    movie:{
+      type:Object,
+      value:{}
+    }
   },
 
   /**

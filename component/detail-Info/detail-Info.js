@@ -5,7 +5,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    movie:{
+      type:Object,
+      value:{}
+    }
   },
 
   /**

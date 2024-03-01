@@ -1,4 +1,4 @@
 <!--pages/movie/detail/components/label/label.wxml-->
-<view class="label-list">
-	<view class="label-item">剧情</view>
+<view class="label-list" wx:if="{{tags}}">
+	<view class="label-item" wx:for="{{tags}}" wx:key="index">{{item}}</view>
 </view>

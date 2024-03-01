@@ -16,7 +16,7 @@
     <text class="tool-item__delimiter">·</text>
     <view class="tool-item">{{ article.read_count }} 浏览</view>
     <view style="flex: 1"></view>
-    <view class="tool-item">{{ created_at }}</view>
+    <view class="tool-item">{{ article.created_at }}</view>
 	</view>
 
 	<view class="clear"></view>

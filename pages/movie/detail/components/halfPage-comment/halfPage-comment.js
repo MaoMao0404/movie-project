@@ -15,7 +15,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    // 评论
+    comment:''
   },
 
   /**
@@ -24,6 +25,12 @@ Component({
   methods: {
     closeComment(){
       this.triggerEvent('closeComment')
+    },
+    // 获取输入的评论
+    commentChange(e){
+      this.setData({
+        comment:e.detail.value
+      })
     }
   }
 })

@@ -1,5 +1,7 @@
 /**app.wxss**/
 @import 'static/style/theme.wxss';
+@import '/miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+
 element{
 	box-sizing: border-box;
 }
