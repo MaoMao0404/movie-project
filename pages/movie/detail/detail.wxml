@@ -80,7 +80,7 @@
 		<text class="commenticon iconfont icon-pinglun1"></text>
 	</view>
 	<!-- 电影评论半屏页面 -->
-	<halfPage-comment isCommentShow="{{isCommentShow}}" bindcloseComment="closeComment"></halfPage-comment>
+	<halfPage-comment ID="{{id}}" isCommentShow="{{isCommentShow}}" movieCommentList="{{movieCommentList}}" bindcloseComment="closeComment" bindgetComment="getComment" bindupdateCommentList="openComment"></halfPage-comment>
 </view>
 
 <footer></footer>

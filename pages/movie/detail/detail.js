@@ -10,7 +10,7 @@ Page({
    */
   data: {
     // 电影id
-    id:1197950,
+    id:null,
     // 电影详细信息
     movie:{},
     // 我的电影评分和评论
@@ -24,6 +24,16 @@ Page({
     reviewper_page:20,
     // 经典影评累计数量
     reviewNumber:0,
+    // 用户评论列表
+    movieCommentList:[],
+    // 用户评论列表页数
+    commentPage:1,
+    // 每次请求20条
+    commentper_page:20,
+    // 用户评论累计数量
+    commentNumber:0,
+    // 用户评论总量
+    commentTotal:0,
     // 控制tabbar栏
     type:'introduction',
     typeList:[
@@ -83,8 +93,19 @@ Page({
   // 打开评论界面
   openComment(){
     this.setData({
-      isCommentShow:true
+      isCommentShow:true,
+      // 重新获取数据 清空原来的数据
+      // 用户评论列表
+      movieCommentList:[],
+      // 用户评论列表页数
+      commentPage:1,
+      // 每次请求20条
+      commentper_page:20,
+      // 用户评论累计数量
+      commentNumber:0,
     })
+    // 获取用户评论
+    this.getMovieComments()
   },
   // 关闭评论界面
   closeComment(){
@@ -103,6 +124,12 @@ Page({
     this.setData({
       isScoreShow:false
     })
+  },
+  // 滑动获取用户评论
+  getComment(){
+    if (this.data.commentNumber<this.data.commentTotal) {
+      this.getMovieComments()
+    }
   },
   // 获取电影详情页信息
   async getMovie(){
@@ -190,6 +217,11 @@ Page({
       this.setData({
         isScore:true
       })
+      wx.showToast({
+        title: '发布成功',
+        icon: 'none',
+        duration: 2000
+      })
     }
     // 关闭评分页并刷新
     this.closeScore()
@@ -206,7 +238,7 @@ Page({
       this.setData({
         movieReviewList:[...this.data.movieReviewList,...data],
         reviewPage:this.data.reviewPage+1,
-        reviewNumber:this.data.movieReviewList+data.length
+        reviewNumber:this.data.reviewNumber+data.length
       })
     }
     // 没有更多数据
@@ -220,16 +252,30 @@ Page({
       isLoading:false
     })
   },
+  // 获取用户评论
+  async getMovieComments(){
+    const {code,data,total} = await getMovieComments(this.data.id,{page:this.data.commentPage,per_page:this.data.commentper_page,sortby:'created_at'})
+    if (code==200) {
+      this.setData({
+        movieCommentList:[...this.data.movieCommentList,...data],
+        commentPage:this.data.commentPage+1,
+        commentNumber:this.data.commentNumber+data.length,
+        commentTotal:total
+      })
+    }
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    // this.setData({
-    //   id:options.id
-    // })
+    this.setData({
+      id:options.id
+    })
     if (this.data.id) {
+      // 获取电影详细信息
       this.getMovie()
+      // 获取经典影评
       this.getMovieReviews()
     }
   },

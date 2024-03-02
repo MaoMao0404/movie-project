@@ -16,3 +16,13 @@ export const createMovieRating = (id,params)=>request.post(`/user/movies/${id}/r
 export const getMovieComments = (id,params)=>request.get(`/movies/${id}/comments`,params)
 // 获取影片长评
 export const getMovieReviews = (id,params)=>request.get(`/movies/${id}/reviews`,params)
+// 用户点赞评论
+export const createLike = (id)=>request.post(`/comments/${id}/like`)
+// 用户取消点赞评论
+export const deleteLike = (id)=>request.delete(`/comments/${id}/like`)
+// 用户创建评论
+export const createMovieComment = (id,params)=>request.post(`/movies/${id}/comments`,params)
+// 用户删除评论
+export const deleteComment = (id)=>request.delete(`/comments/${id}`)
+// 用户举报评论
+export const createReport = (params)=>request.post('/reports',params)

@@ -1,12 +1,13 @@
 /* pages/movie/detail/components/halfPage-comment/halfPage-comment.wxss */
 .my-comment{
 	position: fixed;
-	bottom: 10rpx;
+	bottom: 0rpx;
 	display: flex;
 	justify-content: space-around;
 	padding: 20rpx;
 	border: 2px solid rgb(238, 238, 238);
 	border-radius: 30rpx;
+	background-color: #fff;
 }
 .my-comment .textarea{
 	width: 470rpx;
@@ -19,4 +20,8 @@
 	background-color: #333;
 	border-radius: 40rpx;
 	color: white;
+}
+.contain{
+	box-sizing: border-box;
+	padding-bottom: 56rpx;
 }

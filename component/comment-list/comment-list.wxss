@@ -56,6 +56,9 @@
 	color: var(--color-text-second);
 	font-size: 24rpx;
 }
+.comment-date{
+	width: 360rpx;
+}
 
 .like{
 	color: red;

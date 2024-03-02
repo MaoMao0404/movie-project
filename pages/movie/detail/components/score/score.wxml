@@ -17,12 +17,12 @@
 			<view>未上映</view>
 		</view>
 
-		<view class="item" wx:if="{{isScore==false&&release_status==0}}" bindtap="openScore">
+		<view class="item" wx:if="{{isScore==false&&release_status!=1}}" bindtap="openScore">
 			<image class="img" src="/images/moviedetail-icon/pingfen.png" mode=""/>
 			<view>评分</view>
 		</view>
 
-		<view class="item isActive" wx:if="{{isScore==true&&release_status==0}}" bindtap="openScore">
+		<view class="item isActive" wx:if="{{isScore==true&&release_status!=1}}" bindtap="openScore">
 			<image class="img" src="/images/moviedetail-icon/yipingfen.png" mode=""/>
 			<view>已评分</view>
 		</view>

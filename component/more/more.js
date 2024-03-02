@@ -1,5 +1,8 @@
 // component/more/more.js
 Component({
+  options:{
+    styleIsolation:"isolated"
+  },
 
   /**
    * 组件的属性列表
