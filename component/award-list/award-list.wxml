@@ -1,0 +1,25 @@
+<!--component/award-list/award-list.wxml-->
+<view class="movie-list" wx:for="{{awardsList}}" wx:key="index" >
+	<view class="movie-listcontent" bindtap="pathTo" data-id="{{item.id}}" data-title="{{item.title}}">
+		<image class="img" src="../../images/homeicon/link.png" mode="center"/>
+		<view class="text">
+			<view class="detail">
+				<view class="title">{{item.title}}</view>
+				<view wx:if="{{item.title_en}}">{{item.title_en}}</view>
+				<text wx:if="{{item.categories}}">{{item.categories}} </text>
+				<text wx:if="{{item.country.name}}">{{item.country.name}} </text>
+			</view>
+			<view class="rating">{{item.session?item.session+'届':"无数据"}}</view>
+		</view>
+	</view>
+</view>
+
+
+<wxs module="function">
+      module.exports = {
+        getStr:function(str,start,end){
+          return str.slice(start,end)
+        }
+      }
+</wxs> 
+​

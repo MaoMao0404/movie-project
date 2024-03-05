@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#333",
+  "navigationBarTitleText": "正在热映",
+  "onReachBottomDistance": 50
+}

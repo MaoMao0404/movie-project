@@ -15,7 +15,7 @@ Component({
   methods: {
     pathTo() {
       wx.navigateTo({
-        // url: `/pages/article/detail/index?id=${this.data.article.id}`
+        url: `/pages/review/review?id=${this.properties.article.id}`
       })
     }
   }

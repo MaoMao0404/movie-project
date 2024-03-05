@@ -5,7 +5,14 @@
     "pages/video/video",
     "pages/my/my",
     "pages/search/search",
-    "pages/movie/detail/detail"
+    "pages/movie/detail/detail",
+    "pages/movie/today/today",
+    "pages/movie/hot/hot",
+    "pages/movie/top/top",
+    "pages/movie/coming/coming",
+    "pages/movie/award/award",
+    "pages/review/review",
+    "pages/account/login/login"
   ],
   "usingComponents": {
     "home-menu":"/component/home-menu/home-menu",
@@ -28,6 +35,7 @@
     "detail-Info":"/component/detail-Info/detail-Info",
     "comment-list":"/component/comment-list/comment-list",
     "video-rowlist":"/component/video-rowlist/video-rowlist",
+    "award-list":"/component/award-list/award-list",
     "mp-half-screen-dialog":"/miniprogram_npm/weui-miniprogram/half-screen-dialog/half-screen-dialog",
     "van-rate": "/miniprogram_npm/@vant/weapp/rate/index"
   },

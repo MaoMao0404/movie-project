@@ -11,7 +11,7 @@
 					{{function.getStr(item.genres,0,14)}} 
 				</view>
 			</view>
-			<view class="rating">{{item.rating}}分</view>
+			<view class="rating">{{item.rating?item.rating+'分':"无"}}</view>
 		</view>
 	</view>
 </view>

@@ -1,21 +1,21 @@
 <!--component/home-menu/home-menu.wxml-->
 <view class="title">热门分类</view>
 <view class='nav-wrapper'>
-  <view class="history">
+  <view class="history" bindtap="pathTo" data-url="/pages/movie/today/today">
     <image class="img-history" src="/images/homeicon/rili.png" mode=""/>
     <view>那年今日</view>
   </view>
   <view class="else">
-    <view class="hot">
+    <view class="hot" bindtap="pathTo" data-url="/pages/movie/hot/hot">
       <image class="img" src="/images/homeicon/reying.png" mode=""/>
       <view>正在热映</view>
     </view>
     <view class="bottom">
-      <view class="small">
+      <view class="small" bindtap="pathTo" data-url="/pages/movie/top/top">
         <image class="img" src="/images/homeicon/liangdian.png" mode=""/>
         <view>高分</view>
       </view>
-      <view class="small">
+      <view class="small" bindtap="pathTo" data-url="/pages/movie/award/award">
         <image class="img" src="/images/homeicon/link.png" mode=""/>
         <view>奖项</view>
       </view>

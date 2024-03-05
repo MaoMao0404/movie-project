@@ -57,7 +57,7 @@ function request(url, data = {}, method = 'GET') {
 
           if (res.data.code >= 400) {
             wx.showToast({
-              title: String(res.data.message || 'system error'),
+              title: '目前无法操作，请耐心等待',
               icon: 'none',
               duration: 2000
             })

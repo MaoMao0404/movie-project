@@ -13,4 +13,5 @@
 	border-radius: 40rpx;
 	color: var(--color-text-main);
 	background-color: var(--backgroundColor-movie);
+	font-weight: 600;
 }

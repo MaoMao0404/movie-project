@@ -1,0 +1,118 @@
+/* pages/review/review.wxss */
+@import '/static/style/icon.wxss';
+.main {
+	padding: 0 30rpx 20rpx;
+}
+
+.review-title {
+	padding: 30rpx 0;
+	font-size: 44rpx;
+	line-height: 60rpx;
+	font-weight: bold;
+	text-align: justify;
+	color: var(--color-text-main);
+}
+
+.author {
+	display: flex;
+}
+
+.author-avatar {
+	height: 70rpx;
+	width: 70rpx;
+	border-radius: 50%;
+	border: 2px solid var(--backgroundColor-movie);
+}
+
+.author-info {
+	margin-left: 20rpx;
+	line-height: 34rpx;
+}
+
+.author-name {
+	font-weight: bold;
+	font-size: 28rpx;
+	color: var(--color-text-main);
+	margin-bottom: 6rpx;
+}
+
+.review-info {
+	font-size: 28rpx;
+	color: var(--color-text-second);
+}
+
+.extra-info {
+	margin: 10rpx 0;
+	color: rgba(238, 39, 39, 0.829);
+	font-size: 28rpx;
+	line-height: 40rpx;
+	text-align: right;
+}
+
+.extra-info-label {
+	margin-left: 16rpx;
+}
+
+.origin {
+	padding-bottom: 30rpx;
+	font-size: 28rpx;
+	text-align: right;
+	color: var(--color-text-second);
+}
+
+.origin-link {
+	color: rgba(128, 211, 128, 0.89);
+}
+
+.review-content {
+	line-height: 1.8;
+	color: var(--color-text-main);
+	text-align: justify;
+	word-break: break-all;
+}
+
+.copyright {
+	line-height: 100rpx;
+	font-size: 28rpx;
+	color: var(--color-text-second);
+}
+
+.comment-publish{
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	position: fixed;
+	bottom: 0;
+	width: 710rpx;
+	height: 78rpx;
+	padding: 0 30rpx;
+	border-top: 1px solid var(--color-line);
+	color: var(--color-text-second);
+	background-color: #fff;
+}
+
+.commenticon{
+	font-size: 50rpx;
+}
+.up{
+	color: red;
+}
+.down{
+	color: rgba(0, 183, 255, 0.836);
+}
+.collect{
+	color: #f4ea29;
+}
+.half-review{
+	position: fixed;
+	bottom: 0rpx;
+}
+.weui-half-screen-dialog {
+	max-height: 100% !important;
+	top: 4%;
+}
+
+.weui-half-screen-dialog__ft {
+	display: none;
+}

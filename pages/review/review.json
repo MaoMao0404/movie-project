@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "halfPage-review":"/pages/review/components/halfPage-review/halfPage-review"
+  },
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "经典影评"
+}

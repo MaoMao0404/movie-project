@@ -1,0 +1,27 @@
+/* pages/review/components/halfPage-review/halfPage-review.wxss */
+.my-comment{
+	position: fixed;
+	bottom: 0rpx;
+	display: flex;
+	justify-content: space-around;
+	padding: 20rpx;
+	border: 2px solid rgb(238, 238, 238);
+	border-radius: 30rpx;
+	background-color: #fff;
+}
+.my-comment .textarea{
+	width: 470rpx;
+	height: 150rpx;
+	margin-right: 20rpx;
+}
+.my-comment .button{
+	align-self:flex-end;
+	padding: 10rpx 30rpx;
+	background-color: #333;
+	border-radius: 40rpx;
+	color: white;
+}
+.contain{
+	box-sizing: border-box;
+	padding-bottom: 56rpx;
+}

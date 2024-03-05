@@ -1,5 +1,6 @@
 // pages/home/home.js
 import { getHome, getTop } from "../../api/index/home";
+import { getMovieReviews } from "../../api/index/movie";
 
 Page({
 
@@ -10,9 +11,7 @@ Page({
     // 轮播图
     swiper:[],
     // 文章咨询
-    article:{
-      data:[]
-    },
+    article:[],
     // 即将上映
     coming:{
       data:[],
@@ -36,9 +35,9 @@ Page({
   async getHomeData(){
     const {code,data} = await getHome()
     if(code==200){
-      const {swiper,article,coming,theater,today}=data
+      const {swiper,coming,theater,today}=data
       this.setData({
-        swiper,article,coming,theater,today
+        swiper,coming,theater,today
       })
     }
   },
@@ -48,6 +47,15 @@ Page({
     if(code==200){
       this.setData({
         top:data
+      })
+    }
+  },
+  // 获取优质影评
+  async getMovieReviews(){
+    const {code,data} =await getMovieReviews(1197950,{page:1,per_page:2,sortby:'hot'})
+    if (code==200) {
+      this.setData({
+        article:data
       })
     }
   },
@@ -65,6 +73,7 @@ Page({
   onLoad(options) {
     this.getHomeData()
     this.getTop()
+    this.getMovieReviews()
   },
 
   /**

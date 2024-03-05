@@ -1,0 +1,44 @@
+<!--pages/review/review.wxml-->
+<!-- 长篇影评详细信息 -->
+<view class="main">
+    <view class="review-title">{{ review.title }}</view>
+
+    <!-- 作者信息 -->
+    <view class="author" wx:if="{{author}}">
+      <image class="author-avatar" src="{{author.avatar}}" />
+      <view class="author-info">
+        <view class="author-name">{{ author.username }}</view>
+        <view class="review-info">{{ review.created_at }}</view>
+      </view>
+    </view>
+
+    <!-- 剧透 -->
+    <view class="extra-info" wx:if="{{ review.is_spoiler === 1}}">
+      <text class="extra-info-label" wx:if="{{review.is_spoiler === 1}}">该影评可能存在剧透</text>
+    </view>
+
+    <!-- 来源 -->
+    <view class="origin" wx:if="{{review.from && review.from !== 'muying'}}">
+      <text>该影评来自：</text>
+      <text class="origin-link">{{ review.from_zh }}</text>
+    </view>
+
+    <!-- 内容 -->
+    <rich-text class="review-content" nodes="{{review.content}}" />
+
+    <!-- 影评版权信息 -->
+    <view class="copyright">禁止所有转载</view>
+
+    <view style="height: 20rpx"></view>
+</view>
+<movie-list movieList="{{movie}}"></movie-list>
+<view style="height: 100rpx"></view>
+
+<!-- 底部评论框 -->
+<view class="comment-publish">
+		<text class="commenticon iconfont icon-xihuan {{vote_type==1?'up':''}}" bindtap="upReview" data-up="{{up}}"></text>
+		<text class="commenticon iconfont icon-buxihuan {{vote_type==-1?'down':''}}" bindtap="downReview" data-down="{{down}}"></text>
+		<text class="commenticon iconfont icon-shoucang {{is_collection==1?'collect':''}}" bindtap="userCollection"></text>
+		<text class="commenticon iconfont icon-pinglun1" bindtap="openComment"></text>
+</view>
+<halfPage-review ID="{{review.id}}" isCommentShow="{{isCommentShow}}" commentList="{{commentList}}" bindcloseComment="closeComment" bindgetComment="getComment" bindupdateCommentList="openComment"></halfPage-review>

@@ -7,7 +7,7 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    navigateTo(e) {
+    pathTo(e) {
       wx.navigateTo({
         url: e.currentTarget.dataset.url
       })

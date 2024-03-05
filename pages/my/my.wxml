@@ -1,4 +1,5 @@
 <!--pages/my/my.wxml-->
+<!-- 我的 主页 -->
 <my-userInfo isLogin="{{isLogin}}"></my-userInfo>
 <my-userMenu count="{{count}}" isLogin="{{isLogin}}"></my-userMenu>
 <my-userList isLogin="{{isLogin}}"></my-userList>

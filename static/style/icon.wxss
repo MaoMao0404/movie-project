@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4426781 */
-  src: url('//at.alicdn.com/t/c/font_4426781_mrr6pfo0ypa.woff2?t=1709379087733') format('woff2'),
-       url('//at.alicdn.com/t/c/font_4426781_mrr6pfo0ypa.woff?t=1709379087733') format('woff'),
-       url('//at.alicdn.com/t/c/font_4426781_mrr6pfo0ypa.ttf?t=1709379087733') format('truetype');
+  src: url('//at.alicdn.com/t/c/font_4426781_76c1q88kbts.woff2?t=1709649187973') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4426781_76c1q88kbts.woff?t=1709649187973') format('woff'),
+       url('//at.alicdn.com/t/c/font_4426781_76c1q88kbts.ttf?t=1709649187973') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,25 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-yanjing:before {
+  content: "\e661";
+}
+
+.icon-quxiao:before {
+  content: "\e621";
+}
+
+.icon-buxihuan:before {
+  content: "\e795";
+}
+.icon-xihuan:before {
+  content: "\e8c3";
+}
+
+.icon-shoucang:before {
+  content: "\e8b9";
 }
 
 .icon-jubao:before {

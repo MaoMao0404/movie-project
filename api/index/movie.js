@@ -14,8 +14,10 @@ export const updateUserFavoriteMovie = (id,params)=>request.put(`/user/movies/${
 export const createMovieRating = (id,params)=>request.post(`/user/movies/${id}/rating`,params)
 // 获取影片评论
 export const getMovieComments = (id,params)=>request.get(`/movies/${id}/comments`,params)
-// 获取影片长评
+// 获取影片长评列表
 export const getMovieReviews = (id,params)=>request.get(`/movies/${id}/reviews`,params)
+// 获取影片长评详情
+export const getReview = (id)=>request.get(`/reviews/${id}`)
 // 用户点赞评论
 export const createLike = (id)=>request.post(`/comments/${id}/like`)
 // 用户取消点赞评论

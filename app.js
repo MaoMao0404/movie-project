@@ -16,16 +16,12 @@ App({
   },
   onLaunch() {
     this.createUserFavorite()
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
   },
   globalData: {
     // 用户信息
     userInfo: null,
+    // token
+    token:"",
     // 用户默认收藏夹id
     userFavoriteId:null
   }

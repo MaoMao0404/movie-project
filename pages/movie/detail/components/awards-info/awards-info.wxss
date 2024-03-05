@@ -18,6 +18,10 @@
 	margin-bottom: 20rpx;
 }
 .awards-content .awards-item .score{
+	font-size: 40rpx;
+	font-weight:550;
+}
+.awards-content .awards-item .award{
 	font-size: 30rpx;
 	font-weight:550;
 }

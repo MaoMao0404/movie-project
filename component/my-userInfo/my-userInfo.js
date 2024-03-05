@@ -25,6 +25,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    // 跳转到登录页
+    pathTo(){
+      wx.navigateTo({
+        url: '/pages/account/login/login',
+      })
+    }
   }
 })

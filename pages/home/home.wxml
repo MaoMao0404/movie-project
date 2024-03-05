@@ -1,4 +1,5 @@
 <!--pages/home/home.wxml-->
+<!-- 主页 -->
 <!-- 搜索框 -->
 <view class="search" bindtap="pathTo">
 	<view class="ico">
@@ -18,30 +19,30 @@
 <home-menu></home-menu>
 
 <!-- 即将上映 -->
-<panel title="即将上映" subtitle="{{coming.total}}部" to="">
+<panel title="即将上映" subtitle="{{coming.total}}部" to="/pages/movie/coming/coming">
 	<row-list class="home-rowlist" wx:for="{{coming.data}}" wx:key="index" movie="{{item}}">
 		<view class="coming-date">{{ item.release_date }}</view>
 	</row-list>
 </panel>
 
 <!-- 正在热映 -->
-<panel title="正在热映" subtitle="{{theater.total}}部" to="">
+<panel title="正在热映" subtitle="{{theater.total}}部" to="/pages/movie/hot/hot">
 	<row-list class="home-rowlist" wx:for="{{theater.data}}" wx:key="index" movie="{{item}}"></row-list>
 </panel>
 
 <!-- 高分推荐 -->
-<panel title="高分推荐" subtitle="142部" to="">
+<panel title="高分推荐" subtitle="100部" to="/pages/movie/top/top">
 	<row-list class="home-rowlist" wx:for="{{top}}" wx:key="index" movie="{{item}}"></row-list>
 </panel>
 
 <!-- 那年今日 -->
-<panel title="那年今日" subtitle="{{today.total}}部" to="">
+<panel title="那年今日" subtitle="{{today.total}}部" to="/pages/movie/today/today">
 	<row-list class="home-rowlist" wx:for="{{today.data}}" wx:key="index" movie="{{item}}"></row-list>
 </panel>
 
 <!-- 优质影评 -->
-<panel title="优质影评" scroll-x="{{false}}">
-	<article wx:for="{{article.data}}" article="{{item}}" wx:key="id"></article>
+<panel title="经典影评" scroll-x="{{false}}">
+	<article wx:for="{{article}}" article="{{item}}" wx:key="id"></article>
 </panel>
 
 <!-- footer -->

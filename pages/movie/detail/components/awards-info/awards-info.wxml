@@ -13,7 +13,7 @@
 
 		<view class="awards-item">
 			<view class="title">{{award.title}}</view>
-			<view class="score">{{award.type_name}}</view>
+			<view class="award">{{award.type_name}}</view>
 		</view>
 	</view>
 </view>

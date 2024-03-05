@@ -9,7 +9,7 @@
 			<van-rate value="{{score}}" void-icon="star" void-color="#eee" bind:change="onChange" color="#ffd21e" size="{{25}}" count="{{10}}" readonly="{{isScore?true:false}}"/>
 		</view>
 		<view class="my-comment">
-			<textarea class="textarea" placeholder="{{isScore?'你已发表过评论':'分享你的影评吧！'}}" value="{{comment}}" maxlength="-1" bindinput="commentChange" disabled="{{isScore?true:false}}" />
+			<textarea class="textarea" placeholder="{{isScore?'你已发表过评论':'分享你的看法吧！'}}" value="{{comment}}" maxlength="-1" bindinput="commentChange" disabled="{{isScore?true:false}}" />
 			<view class="button" bindtap="createMovieRating" wx:if="{{isScore==false}}">发布</view>
 		</view>
 	</view>

@@ -1,5 +1,5 @@
 <!--pages/movie/detail/detail.wxml-->
-
+<!-- 电影详情页 -->
 <!-- 电影标签：介绍基本信息 -->
 <detail-Info movie="{{movie}}"></detail-Info>
 
@@ -29,6 +29,13 @@
 	<panel title="演员表" subtitle="{{movie.cast_count}}" to="" wx:if="{{movie.cast_count}}">
 		<actor-rowlist class="home-rowlist" wx:for="{{movie.cast}}" wx:key="index" actor="{{item}}"></actor-rowlist>
 	</panel>
+	<!-- 底部评论框 -->
+	<view class="comment-publish" bindtap="openComment">
+		<view class="tip">参与评论</view>
+		<text class="commenticon iconfont icon-pinglun1"></text>
+	</view>
+	<!-- 电影评论半屏页面 -->
+	<halfPage-comment ID="{{id}}" isCommentShow="{{isCommentShow}}" movieCommentList="{{movieCommentList}}" bindcloseComment="closeComment" bindgetComment="getComment" bindupdateCommentList="openComment"></halfPage-comment>
 	
 </view>
 
@@ -61,6 +68,8 @@
 	<panel title="相似影视" subtitle="{{movie.like_movies.length}}" to="" wx:if="{{movie.like_movies.length}}">
 		<row-list class="home-rowlist" wx:for="{{movie.like_movies}}" wx:key="id" movie="{{item}}"></row-list>
 	</panel>
+	
+	<footer></footer>
 </view>
 
 <!-- 经典影评 -->
@@ -75,12 +84,6 @@
 	<more isMore="{{isMore}}"></more>
 	
 	<!-- 底部评论框 -->
-	<view class="comment-publish" bindtap="openComment">
-		<view class="tip">发表评论...</view>
-		<text class="commenticon iconfont icon-pinglun1"></text>
-	</view>
-	<!-- 电影评论半屏页面 -->
-	<halfPage-comment ID="{{id}}" isCommentShow="{{isCommentShow}}" movieCommentList="{{movieCommentList}}" bindcloseComment="closeComment" bindgetComment="getComment" bindupdateCommentList="openComment"></halfPage-comment>
-</view>
 
-<footer></footer>
+	<footer></footer>
+</view>

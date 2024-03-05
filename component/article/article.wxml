@@ -12,9 +12,7 @@
   </view>
 
   <view class="article-footer">
-    <view class="tool-item">{{ article.like_count }} 点赞</view>
-    <text class="tool-item__delimiter">·</text>
-    <view class="tool-item">{{ article.read_count }} 浏览</view>
+    <view class="tool-item">浏览 {{ article.read_count }}</view>
     <view style="flex: 1"></view>
     <view class="tool-item">{{ article.created_at }}</view>
 	</view>
