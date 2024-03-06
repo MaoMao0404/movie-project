@@ -27,6 +27,12 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    pathTo(e){
+      console.log(e);
+      const to = e.currentTarget.dataset.to
+      wx.navigateTo({
+        url: `/pages/my/${to}/${to}`,
+      })
+    }
   }
 })

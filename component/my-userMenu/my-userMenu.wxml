@@ -1,18 +1,18 @@
 <view class="my-userMenu">
-	<view class="menu-item" data-type="actor" bindtap="pathTo">
+	<view class="menu-item" data-to="actor" bindtap="pathTo">
     <view class="menu-count">{{ count.actor_count }}</view>
-    <view class="menu-name">关注影人</view>
+    <view class="menu-name">关注演员</view>
   </view>
-  <view class="menu-item" data-type="role" bindtap="pathTo">
-    <view class="menu-count">{{ count.role_count }}</view>
-    <view class="menu-name">关注角色</view>
-  </view>
-  <view class="menu-item" data-type="review" bindtap="pathTo">
+  <view class="menu-item" data-to="review" bindtap="pathTo">
     <view class="menu-count">{{ count.review_count }}</view>
     <view class="menu-name">收藏影评</view>
   </view>
-  <view class="menu-item" data-type="video" bindtap="pathTo">
-    <view class="menu-count">{{ count.video_count }}</view>
-    <view class="menu-name">收藏视频</view>
+  <view class="menu-item" data-to="movie" bindtap="pathTo">
+    <view class="menu-count">{{ count.movie_count }}</view>
+    <view class="menu-name">收藏电影</view>
   </view>
+  <!-- <view class="menu-item" data-type="video" bindtap="pathTo">
+    <view class="menu-count">{{ count.rating_count }}</view>
+    <view class="menu-name">我的评分</view>
+  </view> -->
 </view>

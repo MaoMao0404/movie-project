@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#333",
+  "navigationBarTitleText": "关注演员",
+  "onReachBottomDistance": 50
+}

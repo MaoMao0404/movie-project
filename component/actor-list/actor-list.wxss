@@ -7,7 +7,7 @@
 	box-sizing: border-box;
 	display: flex;
 	justify-content: space-between;
-	height: 170rpx;
+	height: 188rpx;
 	padding: 10rpx 30rpx;
 	background-color: rgba(221, 221, 221, 0.3);
 	border-radius:var(--border-radius-all);

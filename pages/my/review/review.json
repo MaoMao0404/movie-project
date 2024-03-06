@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#333",
+  "navigationBarTitleText": "收藏影评",
+  "onReachBottomDistance": 50
+}

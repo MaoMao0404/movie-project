@@ -12,7 +12,7 @@
   </view>
 
   <view class="article-footer">
-    <view class="tool-item">浏览 {{ article.read_count }}</view>
+    <view class="tool-item" wx:if="{{ article.read_count }}">浏览 {{ article.read_count }}</view>
     <view style="flex: 1"></view>
     <view class="tool-item">{{ article.created_at }}</view>
 	</view>

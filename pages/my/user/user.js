@@ -1,26 +1,24 @@
-// pages/my/my.js
+// pages/my/user/user.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    // 用户是否登录
-    isLogin:false,
-    // Menu收藏的数据
-    count: {
-      actor_count: "-",
-      role_count: "-",
-      review_count: "-",
-      video_count: "-",
-    },
+    // 用户信息
+    userInfo:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    if (app.globalData.userInfo) {
+      this.setData({
+        userInfo:app.globalData.userInfo,
+      })
+    }
   },
 
   /**

@@ -11,7 +11,16 @@ Component({
     isLogin:{
       type:Boolean,
       value:false
+    },
+    username:{
+      type:String,
+      value:""
+    },
+    avatar:{
+      type:String,
+      value:"/images/logo.png"
     }
+
   },
 
   /**

@@ -1,5 +1,6 @@
 // pages/account/login/login.js
-import { Login } from "../../../api/index/account";
+import { Login,getUserInfo,getUserFavorites } from "../../../api/index/account";
+import { createUserFavorite } from "../../../api/index/movie";
 const app = getApp()
 Page({
 
@@ -24,6 +25,18 @@ Page({
       isShowPassword:!this.data.isShowPassword
     })
   },
+  // 动态获取账号
+  getAccount(e){
+    this.setData({
+      account:e.detail.value
+    })
+  },
+   // 动态获取密码
+   getPassword(e){
+    this.setData({
+      password:e.detail.value
+    })
+  },
   // 登录
   doLogin(){
     if (this.data.account === "") {
@@ -43,6 +56,7 @@ Page({
       })
       return;
     }
+    this.Login();
     // code 通过小程序的 wx.login 方法获取，服务端通过此 code 获取到该用户的 openId，并与该账号绑定，以便下次进入小程序时可以通过 WXLogin 接口实现免登录效果
     wx.login({
       success: ({ code }) => {
@@ -61,48 +75,77 @@ Page({
       let params = {
         account:this.data.account,
         password:this.data.password,
-        type: 'minip',
-        code: this.data.code
+        type:'minip',
+        code:this.data.code
       }
       // 发送登录请求 获取用户token
-      const {code,message，、data} = await Login(params);
+      const {code,data} = await Login(params);
       if (code !== 200) {
         wx.showToast({
-          title: '',
+          title: '账号或密码出错',
           icon:'none',
           duration:2000
         })
         return;
       }
-
+      // 存储token
       try {
-        wx.setStorageSync('token', loginRes.data.token)
+        wx.setStorageSync('token',data.token)
       } catch (e) { }
+    } catch (error) {
 
-      const userRes = await getUserInfo();
-
-      this.setData({ loading: false })
-
-      // 登录成功
-      if (userRes.code === 200) {
-
-        app.user = userRes.data
-
-        wx.$toast("登录成功");
-
-        wx.setStorage({
-          key: "user",
-          data: JSON.stringify(userRes.data)
-        })
-
-        wx.navigateBack()
-        // wx.switchTab({
-        //   url: '/pages/home/index',
-        // })
-      }
-    } catch (e) {
-      this.setData({ loading: false })
     }
+      // 获取用户信息
+      this.getUserInfo()
+  },
+
+  async getUserInfo(){
+    const {code,message,data} = await getUserInfo();
+      // 登录成功
+      if (code == 200) {
+        app.globalData.userInfo = data
+        wx.setStorage({
+          key: "userInfo",
+          data: JSON.stringify(data)
+        })
+        wx.switchTab({
+          url: '/pages/home/home',
+        })
+      }else{
+        wx.showToast({
+          title: message,
+          icon:'none',
+          duration:2000
+        })
+        return
+      }
+  },
+  // 获取用户收藏夹
+  async getUserFavorites(){
+    const {code,data,total}=await getUserFavorites()
+    if (code==200) {
+      if (total>0) {
+        wx.setStorageSync('userFavoriteId', data[0].id)
+        app.globalData.userFavoriteId=data[0].id
+      }else{
+        this.createUserFavorite()
+      }
+    }
+  },
+  // 创建默认收藏夹
+  async createUserFavorite(){
+    const {code,data} = await createUserFavorite({name:'默认收藏夹'})
+    if (code==200) {
+      wx.setStorageSync('userFavoriteId', data.id)
+      app.globalData.userFavoriteId=data.id
+    }
+  },
+
+  // 跳转到注册
+  pathToRegister(){
+    wx.navigateTo({
+      url: '/pages/account/register/register',
+    })
   },
 
   /**

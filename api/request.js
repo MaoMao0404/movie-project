@@ -46,16 +46,16 @@ function request(url, data = {}, method = 'GET') {
       success: res => {
 
         if (res.statusCode === 401) {
-          // setTimeout(() => {
-          //   wx.navigateTo({
-          //     url: "/pages/account/login/index"
-          //   })
-          // }, 0)
+          setTimeout(() => {
+            wx.navigateTo({
+              url: "/pages/account/login/login"
+            })
+          }, 0)
         }
 
         if (res.statusCode === 200) {
 
-          if (res.data.code >= 400) {
+          if (res.data.code >= 400&&res.data.code!==404) {
             wx.showToast({
               title: '目前无法操作，请耐心等待',
               icon: 'none',

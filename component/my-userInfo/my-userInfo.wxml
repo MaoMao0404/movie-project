@@ -1,9 +1,10 @@
 <view class="my-userInfo">
 	<view class="images">
-		<image class="img" src="/images/logo.png" mode="aspectFill"/>
+		<image class="img" src="{{avatar}}" mode="aspectFill" wx:if="{{isLogin}}"/>
+		<image class="img" src="/images/logo.png" mode="aspectFill" wx:else/>
 	</view>
 	<view class="userInfo">
-		<view wx:if="{{isLogin}}">name</view>
+		<view wx:if="{{isLogin}}">{{username}}</view>
 		<view wx:else bindtap="pathTo">立即登录</view>
 	</view>
 </view>

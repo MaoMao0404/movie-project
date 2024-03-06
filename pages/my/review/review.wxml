@@ -1,0 +1,11 @@
+<!--pages/my/review/review.wxml-->
+<view style="height: 40rpx;"></view>
+<article wx:for="{{reviewList}}" wx:key="id" article="{{item}}"></article>
+<!-- loading框 -->
+<loading isShow="{{isLoading}}"></loading>
+
+<!-- 返回顶部 -->
+<return-top isShow="{{isTop}}"></return-top>
+
+<!-- 是否有更多数据 -->
+<more isMore="{{isMore}}"></more>

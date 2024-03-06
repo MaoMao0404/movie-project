@@ -1,0 +1,13 @@
+<!--pages/my/user/user.wxml-->
+<view class="item">
+	<ziliao-item title="头像" img="{{userInfo.avatar}}"></ziliao-item>
+	<ziliao-item title="用户名" userinfo="{{userInfo.username}}"></ziliao-item>
+</view>
+<view class="item">
+	<ziliao-item title="账号" userinfo="{{userInfo.phone}}"></ziliao-item>
+	<ziliao-item title="性别" userinfo="{{userInfo.gender}}"></ziliao-item>
+	<ziliao-item title="注册时间" userinfo="{{userInfo.created_at}}"></ziliao-item>
+</view>
+
+
+

@@ -1,0 +1,6 @@
+/* pages/my/user/user.wxss */
+.item{
+	margin-top: 30rpx;
+	border: 2px solid var(--color-border-main);
+	border-radius: 20rpx;
+}

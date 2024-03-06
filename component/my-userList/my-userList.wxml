@@ -1,13 +1,13 @@
 <!--component/my-userList/my-userList.wxml-->
 <view class="my-userList">
-	<view class="ziliao">
-		<my-formItem title="我的资料" src="/images/myicon/ziliao.png" url=''></my-formItem>
-		<my-formItem title="收藏夹" src="/images/myicon/_shoucang.png" url=''></my-formItem>
+	<view class="ziliao" wx:if="{{isLogin}}">
+		<my-formItem title="我的资料" src="/images/myicon/ziliao.png" url='/pages/my/user/user'></my-formItem>
+		<my-formItem title="收藏夹" src="/images/myicon/_shoucang.png" url='/pages/my/movie/movie'></my-formItem>
 	</view>
 	
 	<view class="formlist">
 		<my-formItem title="意见反馈" src="/images/myicon/cunweixinxiang.png" url=''></my-formItem>
 		<my-formItem title="更新日志" src="/images/myicon/bi.png" url=''></my-formItem>
-		<my-formItem title="设置" src="/images/myicon/shezhi.png" url=''></my-formItem>
+		<my-formItem title="设置" src="/images/myicon/shezhi.png" url='/pages/my/set/set'></my-formItem>
 	</view>
 </view>

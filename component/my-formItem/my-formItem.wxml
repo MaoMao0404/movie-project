@@ -1,5 +1,5 @@
 <!--component/my-formItem/my-formItem.wxml-->
-<view class="my-formList" >
+<view class="my-formList" bindtap="pathTo">
 	<view class="content">
 		<image src="{{src}}" mode="" class="iconf1"/>
 		<view class="title">{{title}}</view>

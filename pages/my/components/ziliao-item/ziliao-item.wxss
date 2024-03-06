@@ -1,0 +1,27 @@
+/* pages/my/components/ziliao-item/ziliao-item.wxss */
+.my-formList{
+	height: 100rpx;
+	padding: 0 32rpx;
+}
+.content{
+	position: relative;
+	box-sizing: border-box;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: var(--color-text-main);
+	border-bottom: 1px solid rgb(219, 219, 219);
+}
+.title{
+	color: var(--color-text-main);
+}
+.icon{
+	color: var(--color-text-second);
+}
+.img{
+	height: 65rpx;
+	width: 65rpx;
+	border-radius: 50%;
+	border: 1px solid var(--color-text-second);
+}

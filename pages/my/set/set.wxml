@@ -1,0 +1,8 @@
+<!--pages/my/set/set.wxml-->
+<view class="item">
+	<ziliao-item title="小程序名称" userinfo="爆米花"></ziliao-item>
+	<ziliao-item title="作者" userinfo="毛毛毛"></ziliao-item>
+	<ziliao-item title="版本" userinfo="1.0"></ziliao-item>
+</view>
+
+<button class="btn">退出登录</button>

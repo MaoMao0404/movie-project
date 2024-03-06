@@ -1,0 +1,8 @@
+<!--pages/my/components/ziliao-item/ziliao-item.wxml-->
+<view class="my-formList" bindtap="pathTo">
+	<view class="content">
+		<view class="title">{{title}}</view>
+		<view class="icon" wx:if="{{userinfo}}">{{userinfo}}</view>
+		<image class="img" wx:else src="{{img}}" mode="aspectFill"/>
+	</view>
+</view>

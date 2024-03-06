@@ -30,6 +30,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    pathTo(){
+      wx.navigateTo({
+        url: `${this.properties.url}`,
+      })
+    }
   }
 })

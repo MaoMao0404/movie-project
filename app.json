@@ -3,7 +3,7 @@
     "pages/home/home",
     "pages/category/category",
     "pages/video/video",
-    "pages/my/my",
+    "pages/my/index/my",
     "pages/search/search",
     "pages/movie/detail/detail",
     "pages/movie/today/today",
@@ -12,7 +12,13 @@
     "pages/movie/coming/coming",
     "pages/movie/award/award",
     "pages/review/review",
-    "pages/account/login/login"
+    "pages/account/login/login",
+    "pages/account/register/register",
+    "pages/my/actor/actor",
+    "pages/my/review/review",
+    "pages/my/movie/movie",
+    "pages/my/user/user",
+    "pages/my/set/set"
   ],
   "usingComponents": {
     "home-menu":"/component/home-menu/home-menu",
@@ -37,7 +43,10 @@
     "video-rowlist":"/component/video-rowlist/video-rowlist",
     "award-list":"/component/award-list/award-list",
     "mp-half-screen-dialog":"/miniprogram_npm/weui-miniprogram/half-screen-dialog/half-screen-dialog",
-    "van-rate": "/miniprogram_npm/@vant/weapp/rate/index"
+    "van-rate": "/miniprogram_npm/@vant/weapp/rate/index",
+    "van-popup": "/miniprogram_npm/@vant/weapp/popup/index",
+    "ziliao-item":"/pages/my/components/ziliao-item/ziliao-item"
+    
   },
   "tabBar": {
     "borderStyle": "black",
@@ -58,7 +67,7 @@
 
       },
       {
-        "pagePath": "pages/my/my",
+        "pagePath": "pages/my/index/my",
         "iconPath": "images/tabBarimg/my.png",
         "selectedIconPath": "images/tabBarimg/my_fill.png"
       }
