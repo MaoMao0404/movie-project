@@ -4,3 +4,30 @@
 	border: 2px solid var(--color-border-main);
 	border-radius: 20rpx;
 }
+.text{
+	width: 400rpx;
+	height: 70rpx;
+	border: 2px solid #333;
+	border-radius: 40rpx;
+	padding: 10rpx 20rpx;
+	margin: 40rpx 40rpx;
+	color: #333;
+}
+.btn{
+	width: 100%;
+	height: 70rpx;
+	display: flex;
+	text-align: center;
+	color: #333;
+	margin-bottom: 40rpx;
+	border-top: 2px solid var(--color-line);
+}
+.btn .btn-item{
+	flex: 1;
+	height: 110rpx;
+	line-height: 100rpx;
+}
+.btn .btn-item:first-child{
+	border-right: 2px solid var(--color-line);
+	color: lightcoral;
+}

@@ -1,0 +1,8 @@
+/* pages/movie/level/level.wxss */
+.level{
+	margin: 30rpx 0;
+	padding: 20rpx 26rpx;
+	color: var(--color-text-main);
+	background-color:var(--background-detail-info);
+	border-radius: 40rpx;
+}

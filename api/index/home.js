@@ -15,3 +15,5 @@ export const getTop = (params)=> request.get('/movie/top',params)
 export const getMovieComing = (params)=>request.get('/movie/coming',params)
 // 获取奖项列表
 export const getAwards = ()=>request.get('/awards')
+// 获取奖项详细信息
+export const getAwardDetail = (name)=>request.get(`/awards/${name}`)

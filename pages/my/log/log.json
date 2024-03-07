@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-steps": "/miniprogram_npm/@vant/weapp/steps/index"
+  },
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "更新日志",
+  "navigationBarBackgroundColor": "#fff"
+}

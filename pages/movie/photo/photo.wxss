@@ -1,0 +1,4 @@
+/* pages/movie/photo/photo.wxss */
+.home-rowlist {
+	margin-right: 25rpx;
+}

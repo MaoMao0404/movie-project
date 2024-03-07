@@ -1,0 +1,10 @@
+<!--pages/movie/company/company.wxml-->
+<view class="company" wx:for="{{list}}" wx:key="index">
+	<text class="type" wx:if="{{item.children.length!==0}}">{{item.type_zh}}</text>
+	<view wx:if="{{item.children}}">
+		<view class="children" wx:for="{{item.children}}">
+			<text class="name">{{item.name}}</text>
+		</view>
+	</view>
+</view>
+<footer></footer>

@@ -15,8 +15,6 @@ App({
   globalData: {
     // 用户信息
     userInfo: null,
-    // token
-    token:"",
     // 用户默认收藏夹id
     userFavoriteId:null
   }

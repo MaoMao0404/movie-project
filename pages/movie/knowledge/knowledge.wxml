@@ -1,0 +1,14 @@
+<!--pages/movie/knowledge/knowledge.wxml-->
+<view class="level" wx:for="{{list}}" wx:key="id">
+	<view>{{item.content}}</view>
+</view>
+<!-- loading框 -->
+<loading isShow="{{isLoading}}"></loading>
+
+<!-- 返回顶部 -->
+<return-top isShow="{{isTop}}"></return-top>
+
+<!-- 是否有更多数据 -->
+<more isMore="{{isMore}}"></more>
+
+<footer></footer>

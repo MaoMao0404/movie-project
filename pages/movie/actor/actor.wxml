@@ -1,0 +1,6 @@
+<!--pages/movie/actor/actor.wxml-->
+<view class="cast" wx:for="{{moviecast}}" wx:key="id">
+	<view style="height: 40rpx;"></view>
+	<text class="cast-name">{{item.name}}</text>
+	<actor-list actorList="{{item.children}}"></actor-list>
+</view>

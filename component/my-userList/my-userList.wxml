@@ -6,8 +6,8 @@
 	</view>
 	
 	<view class="formlist">
-		<my-formItem title="意见反馈" src="/images/myicon/cunweixinxiang.png" url=''></my-formItem>
-		<my-formItem title="更新日志" src="/images/myicon/bi.png" url=''></my-formItem>
+		<my-formItem title="意见反馈" src="/images/myicon/cunweixinxiang.png" url='/pages/my/view/view'></my-formItem>
+		<my-formItem title="更新日志" src="/images/myicon/bi.png" url='/pages/my/log/log'></my-formItem>
 		<my-formItem title="设置" src="/images/myicon/shezhi.png" url='/pages/my/set/set'></my-formItem>
 	</view>
 </view>

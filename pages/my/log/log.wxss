@@ -1,0 +1,4 @@
+/* pages/my/log/log.wxss */
+.log{
+	text-align: center;
+}

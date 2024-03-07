@@ -28,3 +28,21 @@ export const createMovieComment = (id,params)=>request.post(`/movies/${id}/comme
 export const deleteComment = (id)=>request.delete(`/comments/${id}`)
 // 用户举报评论
 export const createReport = (params)=>request.post('/reports',params)
+// 获取电影演员表
+export const getMovieCast = (id)=>request.get(`/movies/${id}/cast`)
+// 获取电影相册
+export const getMoviePhotos = (id,params)=>request.get(`/movies/${id}/photos`,params)
+// 获取电影奖项
+export const getMovieAwards = (id)=>request.get(`/movies/${id}/awards`)
+// 获取上映日期
+export const getMoviePubdates = (id,params)=>request.get(`/movies/${id}/pubdates`,params)
+// 获取家长引导
+export const getMovieLevels = (id)=>request.get(`/movies/${id}/levels`)
+// 获取幕后知识
+export const getMovieKnowledges = (id,params)=>request.get(`/movies/${id}/knowledges`,params)
+// 获取经典台词
+export const getMovieDialogues = (id)=>request.get(`/movies/${id}/dialogues`)
+// 获取制作发行
+export const getMovieCompanies = (id)=>request.get(`/movies/${id}/companies`)
+// 获取系列影视
+export const getSerial = (id)=>request.get(`/serials/${id}/movies`)

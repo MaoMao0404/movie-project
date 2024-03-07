@@ -27,6 +27,5 @@
     <view class="register" bindtap="pathToRegister">
       账号注册
     </view>
-    <view class="forget" bindtap="pathToForget">找回密码</view>
   </view>
 </view>

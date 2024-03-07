@@ -1,0 +1,5 @@
+<!--pages/my/view/view.wxml-->
+<view class="my-comment">
+	<textarea class="textarea" placeholder="请详细描述您的问题，不少于10个字" value="{{comment}}" maxlength="200" bindinput="commentChange"  />
+</view>
+<view class="button" bindtap="createFeedback">提 交</view>

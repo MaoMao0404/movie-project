@@ -1,6 +1,6 @@
 <!--pages/movie/detail/components/actor-rowlist/actor-rowlist.wxml-->
-<view class="actor-row">
-  <view class="actor-row__poster">
+<view class="actor-row" bindtap="pathTo" data-id="{{actor.id}}">
+  <view class="actor-row__poster" >
 		<image class="poster" mode="aspectFill" lazy-load src="{{actor.avatar}}"/>
 	</view>
 

@@ -1,0 +1,8 @@
+/* pages/movie/actor/actor.wxss */
+.cast-name{
+	padding: 15rpx 60rpx;
+	background-color: var(--backgroundColor-movie);
+	color: var(--color-text-main);
+	font-weight: 600;
+	border-radius: 40rpx;
+}

@@ -1,0 +1,23 @@
+<!--pages/award/award.wxml-->
+<view style="height: 150rpx;"></view>
+<view class="movie-listcontent">
+		<image class="img" src="/images/homeicon/link.png" mode="center"/>
+		<view class="text">
+			<view class="detail">
+				<view class="title">{{list.title}}</view>
+				<view wx:if="{{list.title_en}}">{{list.title_en}}</view>
+				<text wx:if="{{list.categories}}">{{list.categories}} </text>
+				<text wx:if="{{list.country.name}}">{{list.country.name}} </text>
+			</view>
+			<view class="rating">{{list.session?list.session+'届':"无数据"}}</view>
+		</view>
+</view>
+<panel title="奖项简介" scroll-x="{{false}}" wx:if="{{list.brief}}">
+		<view class="brief">	
+			{{list.brief}}
+		</view>
+</panel>
+<view wx:else>
+	<view style="height: 100rpx;"></view>
+	<more isMore="true"></more>
+</view>

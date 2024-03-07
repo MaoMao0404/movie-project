@@ -1,0 +1,5 @@
+<!--pages/movie/dialogue/dialogue.wxml-->
+<view class="level" wx:for="{{list}}" wx:key="id">
+	<view>{{item.content}}</view>
+</view>
+<footer></footer>

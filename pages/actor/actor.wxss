@@ -1,0 +1,48 @@
+/* pages/actor/actor.wxss */
+.actor-listcontent{
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	height: 188rpx;
+	padding: 10rpx 30rpx;
+	background-color: rgba(221, 221, 221, 0.3);
+	border-radius:var(--border-radius-all);
+}
+.actor-listcontent .img{
+	align-self: flex-end;
+	width: 156rpx;
+	height: 200rpx;
+	border-radius: 10rpx;
+	box-shadow: var(--shadow-all);
+}
+.actor-listcontent .text{
+	box-sizing: border-box;
+	padding-top:15rpx;
+	display: flex;
+	justify-content: space-between;
+	width: 460rpx;
+	color: var(--color-text-end);
+	font-size: 30rpx;
+}
+.actor-listcontent .text .title{
+	color: var(--color-text-main);
+	margin-bottom: 8rpx;
+	font-size: 34rpx;
+	font-weight: var(--weight-font-main);
+	text-overflow: ellipsis;
+}
+.actor-listcontent .text .gender{
+	margin-top: 4rpx;
+}
+.home-rowlist {
+	margin-right: 25rpx;
+}
+.btn{
+	position: fixed;
+	bottom: 40rpx;
+	right: 180rpx;
+	width: 400rpx;
+	background-color: #333;
+	border-radius: 40rpx;
+	color: #fff;
+}

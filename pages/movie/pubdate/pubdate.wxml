@@ -1,0 +1,11 @@
+<!--pages/movie/pubdate/pubdate.wxml-->
+<view class="pubdate" wx:for="{{pubdateList}}">
+	<view>{{item.pubdate}}</view>
+	<view>
+		{{item.country}}
+		<text class="premiere">{{item.premiere==1?"(首映)":""}}</text>
+	</view>
+	
+</view>
+
+<footer></footer>

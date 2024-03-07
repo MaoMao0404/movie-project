@@ -93,7 +93,7 @@
 }
 .tool {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	margin-top: 50rpx;
 	padding: 0 80rpx;
 	font-size: 24rpx;

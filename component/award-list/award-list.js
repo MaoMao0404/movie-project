@@ -23,9 +23,9 @@ Component({
    */
   methods: {
     pathTo(e){
-      const id = e.currentTarget.dataset.id
+      const name = e.currentTarget.dataset.name
       wx.navigateTo({
-        // url: `/pages/movie/detail/detail?id=${id}`
+        url: `/pages/award/award?name=${name}`
       })
     }
   }

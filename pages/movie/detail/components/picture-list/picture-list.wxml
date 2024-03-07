@@ -1,5 +1,5 @@
 <!--pages/movie/detail/components/picture-list/picture-list.wxml-->
-<view class="picture-row" bindtap="pathTo">
+<view class="picture-row" bindtap="priview" data-url="{{picture.url}}">
   <view class="picture-row__poster">
 		<image class="poster" mode="aspectFill" lazy-load src="{{picture.url}}"/>
 	</view>

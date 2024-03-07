@@ -1,0 +1,15 @@
+/* pages/movie/pubdate/pubdate.wxss */
+.pubdate{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 70rpx;
+	padding: 6rpx 20rpx;
+	color: var(--color-text-main);
+	background-color: var(--backgroundColor-movie);
+	margin-bottom: 20rpx;
+	border-radius: 40rpx;
+}
+.premiere{
+	color: var(--color-text-second);
+}

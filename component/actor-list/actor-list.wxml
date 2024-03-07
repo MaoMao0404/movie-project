@@ -1,6 +1,6 @@
 <!--component/actor-list/actor-list.wxml-->
 <view class="actor-list" wx:for="{{actorList}}" wx:key="id">
-	<view class="actor-listcontent">
+	<view class="actor-listcontent" bindtap="pathTo" data-id="{{item.id}}">
 		<image class="img" src="{{item.avatar}}" mode="aspectFill"/>
 		<view class="text">
 			<view class="detail">

@@ -1,0 +1,3 @@
+<!--pages/movie/serial/serial.wxml-->
+<movie-list movieList="{{list.movies}}"></movie-list>
+<footer></footer>

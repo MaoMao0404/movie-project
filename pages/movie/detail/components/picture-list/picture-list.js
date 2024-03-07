@@ -22,6 +22,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    priview(e){
+      let url = e.currentTarget.dataset.url
+      wx.previewImage({
+        urls: [url],
+      })
+    }
   }
 })

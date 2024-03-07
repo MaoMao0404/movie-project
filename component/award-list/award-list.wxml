@@ -1,6 +1,6 @@
 <!--component/award-list/award-list.wxml-->
 <view class="movie-list" wx:for="{{awardsList}}" wx:key="index" >
-	<view class="movie-listcontent" bindtap="pathTo" data-id="{{item.id}}" data-title="{{item.title}}">
+	<view class="movie-listcontent" bindtap="pathTo" data-name="{{item.name}}" data-title="{{item.title}}">
 		<image class="img" src="../../images/homeicon/link.png" mode="center"/>
 		<view class="text">
 			<view class="detail">

@@ -1,13 +1,20 @@
 <!--pages/my/user/user.wxml-->
 <view class="item">
-	<ziliao-item title="头像" img="{{userInfo.avatar}}"></ziliao-item>
-	<ziliao-item title="用户名" userinfo="{{userInfo.username}}"></ziliao-item>
+	<ziliao-item title="头像" img="{{userInfo.avatar}}" bindtap="chooseImg"></ziliao-item>
+	<ziliao-item title="用户名" userinfo="{{userInfo.username}}" bindtap="openNewname"></ziliao-item>
 </view>
 <view class="item">
 	<ziliao-item title="账号" userinfo="{{userInfo.phone}}"></ziliao-item>
-	<ziliao-item title="性别" userinfo="{{userInfo.gender}}"></ziliao-item>
+	<ziliao-item title="性别" userinfo="{{userInfo.gender}}" bindtap="openGender"></ziliao-item>
 	<ziliao-item title="注册时间" userinfo="{{userInfo.created_at}}"></ziliao-item>
 </view>
 
+<van-popup show="{{ isShowName }}">
+	<input class="text" type="text" placeholder="请输入修改的昵称" value="{{newname}}" bindinput="getNewname" />
+	<view class="btn">
+		<view class="btn-item" bindtap="updateNewname">确认</view>
+		<view class="btn-item" bindtap="closeNewname">取消</view>
+	</view>
+</van-popup>
 
-
+<van-action-sheet show="{{ isShowGender }}"actions="{{ actions }}" cancel-text="取消" bind:select="onSelect"  bind:close="closeGender" bind:cancel="closeGender"/>

@@ -97,6 +97,8 @@ Page({
     }
       // 获取用户信息
       this.getUserInfo()
+      // 获取用户收藏夹
+      this.getUserFavorites()
   },
 
   async getUserInfo(){

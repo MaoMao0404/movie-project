@@ -24,6 +24,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    pathTo(e){
+      const id = e.currentTarget.dataset.id
+      wx.navigateTo({
+        url: `/pages/movie/serial/serial?id=${id}`,
+      })
+    }
   }
 })

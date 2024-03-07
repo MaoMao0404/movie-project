@@ -1,0 +1,5 @@
+<!--pages/movie/level/level.wxml-->
+<view class="level" wx:for="{{levellist}}" wx:key="id">
+	<view>{{item.content}}</view>
+</view>
+<footer></footer>

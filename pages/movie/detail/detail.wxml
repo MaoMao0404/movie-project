@@ -26,7 +26,7 @@
 	<!-- 基本剧情半屏弹窗 -->
 	<halfPage-brief movie="{{movie}}" isBriefShow="{{isBriefShow}}" bindcloseBrief="closeBrief"></halfPage-brief>
 	<!-- 演员表 -->
-	<panel title="演员表" subtitle="{{movie.cast_count}}" to="" wx:if="{{movie.cast_count}}">
+	<panel title="演员表" subtitle="{{movie.cast_count}}" to='/pages/movie/actor/actor?id={{id}}' wx:if="{{movie.cast_count}}">
 		<actor-rowlist class="home-rowlist" wx:for="{{movie.cast}}" wx:key="index" actor="{{item}}"></actor-rowlist>
 	</panel>
 	<!-- 底部评论框 -->
@@ -43,11 +43,11 @@
 <!-- 电影资料 -->
 <view class="information" wx:if="{{type=='information'}}">
 	<!-- 视频 -->
-	<panel title="视频" subtitle="{{movie.video_count}}" to="" wx:if="{{movie.video_count}}">
+	<panel title="视频" wx:if="{{movie.video_count}}">
 		<video-rowlist wx:for="{{movie.videos}}" wx:key="id" video="{{item}}"></video-rowlist>
 	</panel>
 	<!-- 奖项 -->
-	<panel title="奖项" subtitle="{{movie.awards_total_count}}" to="" wx:if="{{movie.awards_total_count}}">
+	<panel title="奖项" subtitle="{{movie.awards_total_count}}" to="/pages/movie/detailAward/detailAward?id={{id}}" wx:if="{{movie.awards_total_count}}">
 		<awards-info movie="{{movie}}" award="{{movie.awards[0].children[0]}}"></awards-info>
 	</panel>
 	<!-- 资料 -->
@@ -55,17 +55,17 @@
 		<extra-list movie="{{movie}}"></extra-list>
 	</panel>
 	<!-- 相册 -->
-	<panel title="相册" subtitle="{{movie.photo_count}}" to="" wx:if="{{movie.photo_count}}">
+	<panel title="相册" subtitle="{{movie.photo_count}}" to="/pages/movie/photo/photo?id={{id}}" wx:if="{{movie.photo_count}}">
 		<picture-list class="home-rowlist" wx:for="{{movie.photos}}" wx:key="id" picture="{{item}}"></picture-list>
 	</panel>
 
 	<!-- 系列影视 -->
-	<panel title="系列影视" subtitle="{{movie.serial_count}}" to="" wx:if="{{movie.serial_count}}">
+	<panel title="系列影视" wx:if="{{movie.serial_count}}">
 		<serial-rowlist class="home-rowlist" wx:for="{{movie.serials}}" wx:key="id" serial="{{item}}"></serial-rowlist>
 	</panel>
 
 	<!-- 相似影视 -->
-	<panel title="相似影视" subtitle="{{movie.like_movies.length}}" to="" wx:if="{{movie.like_movies.length}}">
+	<panel title="相似影视" wx:if="{{movie.like_movies.length}}">
 		<row-list class="home-rowlist" wx:for="{{movie.like_movies}}" wx:key="id" movie="{{item}}"></row-list>
 	</panel>
 	

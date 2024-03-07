@@ -16,3 +16,5 @@ export const createPhoneCode =(params)=>request.get('/code',params)
 export const register =(params)=>request.post('/register',params)
 // 获取用户收藏夹
 export const getUserFavorites = ()=>request.get('/user/favorites')
+// 用户更新信息
+export const updateUserInfo = (params)=>request.put('/user',params)

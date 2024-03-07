@@ -1,0 +1,31 @@
+<!--pages/actor/actor.wxml-->
+<view style="height: 100rpx;"></view>
+<view class="actor-listcontent">
+		<image class="img" src="{{actor.avatar}}" mode="aspectFill"/>
+		<view class="text">
+			<view class="detail">
+				<view class="title">{{actor.name}}</view>
+				<text>{{actor.name_en}} </text>
+				<view class="gender">{{actor.gender}}</view>
+			</view>
+		</view>
+</view>
+<panel title="个人简介" scroll-x="{{false}}" >
+		<view class="brief" wx:if="{{actor.summary}}">	
+			{{actor.summary}}
+		</view>
+		<more wx:else isMore="true"></more>
+</panel>
+
+<panel title="相册" wx:if="{{actor.photo_count}}">
+	<picture-list class="home-rowlist" wx:for="{{actor.photos}}" wx:key="id" picture="{{item}}"></picture-list>
+</panel>
+
+<panel title="影视作品" wx:if="{{actor.works_count}}">
+	<row-list class="home-rowlist" wx:for="{{actor.works}}" wx:key="id" movie="{{item}}"></row-list>
+</panel>
+
+<button class="btn" bindtap="createUserCollection" wx:if="{{is_collection==0}}">关 注</button>
+
+<footer></footer>
+<view style="height: 80rpx;"></view>

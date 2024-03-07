@@ -1,0 +1,18 @@
+/* pages/movie/company/company.wxss */
+.company{
+	margin-top: 40rpx;
+}
+.company .type{
+	padding: 15rpx 60rpx;
+	background-color: var(--backgroundColor-movie);
+	color: var(--color-text-main);
+	font-weight: 600;
+	border-radius: 40rpx;
+}
+.company .name{
+	padding: 0 20rpx;
+	color: var(--color-text-main);
+}
+.company .children{
+	margin: 50rpx 0;
+}

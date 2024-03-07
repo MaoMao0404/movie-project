@@ -1,0 +1,4 @@
+<!--pages/movie/photo/photo.wxml-->
+<view style="height: 40rpx;"></view>
+<picture-list class="home-rowlist" wx:for="{{pictureList}}" wx:key="id" picture="{{item}}"></picture-list>
+<footer></footer>

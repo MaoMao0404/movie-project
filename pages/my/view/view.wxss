@@ -1,0 +1,22 @@
+/* pages/my/view/view.wxss */
+.my-comment{
+	margin-top: 30rpx;
+	padding: 20rpx;
+	border: 2px solid rgb(238, 238, 238);
+	border-radius: 30rpx;
+	margin-bottom: 40rpx;
+}
+.my-comment .textarea{
+	width: 100%;
+	height: 300rpx;
+}
+.button{
+	margin: 0 auto;
+	height: 70rpx;
+	background-color: #333;
+	border-radius: 40rpx;
+	color: white;
+	text-align: center;
+	line-height: 70rpx;
+	width: 400rpx;
+}

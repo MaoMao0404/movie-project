@@ -23,12 +23,20 @@ Component({
    */
   methods: {
     pathTo(e) {
-    //   const type = e.currentTarget.dataset.type;
-    //   const id = this.data.movie.id;
-
-    //   wx.navigateTo({
-    //     url: `/pages/movie/detail/${type}/index?id=${id}`
-    //   })
+      const type = e.currentTarget.dataset.type;
+      const id = this.data.movie.id;
+      const count = e.currentTarget.dataset.count
+      if (count==0) {
+        wx.showToast({
+          title: '暂无更多数据',
+          icon:'none',
+          duration:2000
+        })
+        return
+      }
+      wx.navigateTo({
+        url: `/pages/movie/${type}/${type}?id=${id}`
+      })
     }
   }
 })

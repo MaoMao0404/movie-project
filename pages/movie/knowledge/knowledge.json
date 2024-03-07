@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "幕后知识",
+  "onReachBottomDistance": 50
+}

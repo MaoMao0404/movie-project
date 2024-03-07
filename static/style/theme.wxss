@@ -25,4 +25,6 @@ page{
 
 	/* 分割线颜色 */
 	--color-line:rgb(238, 238, 238);
+	/* detail-info */
+	--background-detail-info:rgba(192, 185, 224, 0.212)
 }

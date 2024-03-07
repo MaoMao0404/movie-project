@@ -11,6 +11,15 @@
     "pages/movie/top/top",
     "pages/movie/coming/coming",
     "pages/movie/award/award",
+    "pages/movie/actor/actor",
+    "pages/movie/photo/photo",
+    "pages/movie/detailAward/detailAward",
+    "pages/movie/pubdate/pubdate",
+    "pages/movie/level/level",
+    "pages/movie/dialogue/dialogue",
+    "pages/movie/knowledge/knowledge",
+    "pages/movie/company/company",
+    "pages/movie/serial/serial",
     "pages/review/review",
     "pages/account/login/login",
     "pages/account/register/register",
@@ -18,7 +27,11 @@
     "pages/my/review/review",
     "pages/my/movie/movie",
     "pages/my/user/user",
-    "pages/my/set/set"
+    "pages/my/set/set",
+    "pages/my/view/view",
+    "pages/my/log/log",
+    "pages/award/award",
+    "pages/actor/actor"
   ],
   "usingComponents": {
     "home-menu":"/component/home-menu/home-menu",
@@ -45,7 +58,9 @@
     "mp-half-screen-dialog":"/miniprogram_npm/weui-miniprogram/half-screen-dialog/half-screen-dialog",
     "van-rate": "/miniprogram_npm/@vant/weapp/rate/index",
     "van-popup": "/miniprogram_npm/@vant/weapp/popup/index",
-    "ziliao-item":"/pages/my/components/ziliao-item/ziliao-item"
+    "ziliao-item":"/pages/my/components/ziliao-item/ziliao-item",
+    "van-action-sheet": "/miniprogram_npm/@vant/weapp/action-sheet/index",
+    "picture-list":"/pages/movie/detail/components/picture-list/picture-list"
     
   },
   "tabBar": {

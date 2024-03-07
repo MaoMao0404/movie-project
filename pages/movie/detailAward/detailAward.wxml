@@ -1,0 +1,25 @@
+<!--pages/movie/detailAward/detailAward.wxml-->
+<view class="detailawards" wx:for="{{awardsList}}" wx:key="id">
+  <view style="height: 80rpx;"></view>
+	<view class="movie-listcontent">
+		<image class="img" src="/images/homeicon/link.png" mode="center"/>
+		<view class="text">
+			<view class="detail">
+				<view class="title">第{{item.session}}届 {{item.award}}</view>
+				<view>{{item.year}}年</view>
+			</view>
+		</view>
+	</view>
+	<view wx:if="{{item.children}}">
+		<view wx:for="{{item.children}}" wx:key="id">
+			<view style="height: 40rpx;"></view>
+			<text class="type">{{item.type}}</text>
+			<view class="actor" wx:if="{{item.actors}}">
+				<text wx:for="{{item.actors}}" wx:key="id">
+					<text class="name">{{item.name}}</text>
+				</text>
+			</view>
+		</view>
+	</view>
+</view>
+<footer></footer>

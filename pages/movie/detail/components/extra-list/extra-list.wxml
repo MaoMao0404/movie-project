@@ -4,31 +4,31 @@
 	<!-- 上映日期 -->
 	<view class="extra-item">
 		<view class="extra-name">上映日期</view>
-		<view class="extra-label" data-type="pubdate" bindtap="pathTo">{{movie.pubdate_count}}></view>
+		<view class="extra-label" data-type="pubdate" data-count="{{movie.pubdate_count}}" bindtap="pathTo">{{movie.pubdate_count}}></view>
 	</view>
 
 	<!-- 家长引导 -->
 	<view class="extra-item">
 		<view class="extra-name">家长引导</view>
-		<view class="extra-label" data-type="level" bindtap="pathTo">{{movie.level_count}}></view>
+		<view class="extra-label" data-type="level" data-count="{{movie.level_count}}" bindtap="pathTo">{{movie.level_count}}></view>
 	</view>
 
 
 	<!-- 经典台词 -->
 	<view class="extra-item">
 		<view class="extra-name">经典台词</view>
-		<view class="extra-label" data-type="dialogue" bindtap="pathTo">{{movie.dialogue_count}}></view>
+		<view class="extra-label" data-type="dialogue" data-count="{{movie.dialogue_count}}" bindtap="pathTo">{{movie.dialogue_count}}></view>
 	</view>
 
 	<!-- 幕后知识 -->
 	<view class="extra-item">
 		<view class="extra-name">幕后知识</view>
-		<view class="extra-label" data-type="knowledge" bindtap="pathTo">{{movie.knowledge_count}}></view>
+		<view class="extra-label" data-type="knowledge" data-count="{{movie.knowledge_count}}" bindtap="pathTo">{{movie.knowledge_count}}></view>
 	</view>
 
 	<!-- 制作发行 -->
 	<view class="extra-item">
 		<view class="extra-name">制作发行</view>
-		<view class="extra-label" data-type="company" bindtap="pathTo">{{movie.company_count}}></view>
+		<view class="extra-label" data-type="company" data-count="{{movie.company_count}}" bindtap="pathTo">{{movie.company_count}}></view>
 	</view>
 </view>

@@ -1,5 +1,5 @@
 <!--pages/movie/detail/components/serial-rowlist/serial-rowlist.wxml-->
-<view class="serial-row">
+<view class="serial-row" bindtap="pathTo" data-id="{{serial.id}}">
   <view class="serial-row__poster">
 		<image class="poster" mode="aspectFill" lazy-load src="{{serial.poster}}"/>
 	</view>

@@ -1,18 +1,44 @@
 // pages/my/set/set.js
+
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    // 是否登录
+    isLogin:false
 
+  },
+  // 退出登录
+  Logout(){
+      // 清除本地存储数据
+      wx.removeStorageSync('token')
+      wx.removeStorageSync('userFavoriteId')
+      wx.removeStorageSync('userInfo')
+      // 清除全局存储
+      app.globalData.userInfo = null
+      app.globalData.userFavoriteId = null
+      // 跳转到登录页
+      wx.navigateTo({
+        url: '/pages/account/login/login',
+      })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    if (app.globalData.userInfo) {
+      this.setData({
+        isLogin:true
+      })
+    }else{
+      this.setData({
+        isLogin:false
+      })
+    }
   },
 
   /**

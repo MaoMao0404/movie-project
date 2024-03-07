@@ -4,5 +4,6 @@
 	<ziliao-item title="作者" userinfo="毛毛毛"></ziliao-item>
 	<ziliao-item title="版本" userinfo="1.0"></ziliao-item>
 </view>
+<footer></footer>
 
-<button class="btn">退出登录</button>
+<button class="btn" bindtap="Logout" wx:if="{{isLogin}}">退出登录</button>

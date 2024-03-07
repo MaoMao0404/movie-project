@@ -16,3 +16,5 @@ export const getUserCollectionCount = ()=>request.get('/user/collections/count')
 export const getUserCollections = (type,params)=>request.get(`/user/collections/${type}`,params)
 // 我的收藏电影列表
 export const getUserFavoriteMovies = (id,params)=>request.get(`/user/favorites/${id}/movies`,params)
+// 用户反馈
+export const createFeedback = (params)=>request.post('/feedback',params)
