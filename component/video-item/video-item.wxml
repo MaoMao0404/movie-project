@@ -33,16 +33,5 @@
     </view>
 		<!-- 空白区域分割 -->
     <view class="space"></view>
-		<!-- 点赞 评论 -->
-    <view class="video-tool">
-      <view class="tool-item">
-        <text class="tool-item-icon iconfont icon-dianzan" name="like"></text>
-        <text class="tool-item-count">{{video.like_count}}</text>
-      </view>
-      <view class="tool-item">
-        <text class="tool-item-icon iconfont icon-pinglun" name="comment"></text>
-        <text class="tool-item-count">{{video.comment_count}}</text>
-      </view>
-    </view>
   </view>
 </view>
