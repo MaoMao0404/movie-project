@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#333",
+  "navigationBarTitleText": "即将上映",
+  "onReachBottomDistance": 50
 }

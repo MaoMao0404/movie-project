@@ -8,8 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    account: "",
-    password: "",
+    account: "13831446886",
+    password: "123456",
     code: "",
     isShowPassword: false,
   },
@@ -79,10 +79,10 @@ Page({
         code:this.data.code
       }
       // 发送登录请求 获取用户token
-      const {code,data} = await Login(params);
+      const {code,data,message} = await Login(params);
       if (code !== 200) {
         wx.showToast({
-          title: '账号或密码出错',
+          title: message,
           icon:'none',
           duration:2000
         })

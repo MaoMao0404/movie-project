@@ -1,3 +1,4 @@
 <!--pages/my/log/log.wxml-->
 <view style="height: 40rpx;"></view>
 <van-steps class="log" steps="{{ steps }}" direction="vertical" inactive-color="#333" active-color="#333" active="4"/>
+<footer></footer>

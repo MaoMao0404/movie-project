@@ -1,6 +1,6 @@
 // pages/actor/actor.js
 import { getActor } from "../../api/index/actor";
-import { createUserCollection } from "../../api/index/user";
+import { createUserCollection,deleteUserCollection } from "../../api/index/user";
 Page({
 
   /**
@@ -33,6 +33,20 @@ Page({
       })
       wx.showToast({
         title: '关注成功',
+        icon:'none',
+        duration:1000
+      })
+    }
+  },
+  // 取消关注演员
+  async deleteUserCollection(){
+    const {code,data} = await deleteUserCollection('actors',this.data.id)
+    if (code==200) {
+      this.setData({
+        is_collection:data.is_collection
+      })
+      wx.showToast({
+        title: '取消关注',
         icon:'none',
         duration:1000
       })

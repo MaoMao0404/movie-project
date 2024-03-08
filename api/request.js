@@ -46,11 +46,16 @@ function request(url, data = {}, method = 'GET') {
       success: res => {
 
         if (res.statusCode === 401) {
+          wx.showToast({
+            title: res.message,
+            icon:'none',
+            duration:2000
+          })
           setTimeout(() => {
             wx.navigateTo({
               url: "/pages/account/login/login"
             })
-          }, 0)
+          }, 2000)
         }
 
         if (res.statusCode === 200) {

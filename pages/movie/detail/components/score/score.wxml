@@ -3,7 +3,7 @@
 	<view class="score-content">
 		<!-- 想看 -->
 		<view class="item" wx:if="{{isWatch==false}}" bindtap="createOrDeleteMovieWish">
-			<image class="img" src="/images//moviedetail-icon/xihuan.png" mode=""/>
+			<image class="img" src="/images/moviedetail-icon/xihuan.png" mode=""/>
 			<view>想看</view>
 		</view>
 

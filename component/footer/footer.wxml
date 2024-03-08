@@ -1,5 +1,5 @@
 <!--component/footer/footer.wxml-->
 <view class="footer">
 	<image class="img" src="/images/logo.png" mode=""/>
-	<view class="title">影评网</view>
+	<view class="title">爆米花</view>
 </view>

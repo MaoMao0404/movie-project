@@ -8,6 +8,7 @@
 	<ziliao-item title="性别" userinfo="{{userInfo.gender}}" bindtap="openGender"></ziliao-item>
 	<ziliao-item title="注册时间" userinfo="{{userInfo.created_at}}"></ziliao-item>
 </view>
+<footer></footer>
 
 <van-popup show="{{ isShowName }}">
 	<input class="text" type="text" placeholder="请输入修改的昵称" value="{{newname}}" bindinput="getNewname" />

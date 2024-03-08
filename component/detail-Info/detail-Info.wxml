@@ -4,7 +4,7 @@
 		<image class="img" src="{{movie.poster.medium}}" mode="aspectFill"/>
 		<view class="text">
 			<view class="title" wx:if="{{movie.title}}">{{movie.title}}</view>
-			<view class="subtitle" wx:if="{{movie.title_original}}">{{movie.title_original}}</view>
+			<view class="subtitle" wx:if="{{movie.title_original}}">{{function.getStr(movie.title_original,0,29)}}</view>
 			<view class="genre" wx:if="{{movie.genres}}">
 				<text wx:for="{{movie.genres}}" wx:key="index">{{item}} </text>
 			</view>
@@ -15,3 +15,11 @@
 		</view>
 	</view>
 </view>
+
+<wxs module="function">
+      module.exports = {
+        getStr:function(str,start,end){
+          return str.slice(start,end)
+        }
+      }
+</wxs> 

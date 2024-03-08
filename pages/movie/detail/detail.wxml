@@ -43,9 +43,9 @@
 <!-- 电影资料 -->
 <view class="information" wx:if="{{type=='information'}}">
 	<!-- 视频 -->
-	<panel title="视频" wx:if="{{movie.video_count}}">
+	<!-- <panel title="视频" wx:if="{{movie.video_count}}">
 		<video-rowlist wx:for="{{movie.videos}}" wx:key="id" video="{{item}}"></video-rowlist>
-	</panel>
+	</panel> -->
 	<!-- 奖项 -->
 	<panel title="奖项" subtitle="{{movie.awards_total_count}}" to="/pages/movie/detailAward/detailAward?id={{id}}" wx:if="{{movie.awards_total_count}}">
 		<awards-info movie="{{movie}}" award="{{movie.awards[0].children[0]}}"></awards-info>

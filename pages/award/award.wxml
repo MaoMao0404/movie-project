@@ -1,5 +1,5 @@
 <!--pages/award/award.wxml-->
-<view style="height: 150rpx;"></view>
+<view style="height: 100rpx;"></view>
 <view class="movie-listcontent">
 		<image class="img" src="/images/homeicon/link.png" mode="center"/>
 		<view class="text">
@@ -21,3 +21,4 @@
 	<view style="height: 100rpx;"></view>
 	<more isMore="true"></more>
 </view>
+<footer></footer>

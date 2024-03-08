@@ -1,5 +1,5 @@
 <!--pages/actor/actor.wxml-->
-<view style="height: 100rpx;"></view>
+<view style="height: 80rpx;"></view>
 <view class="actor-listcontent">
 		<image class="img" src="{{actor.avatar}}" mode="aspectFill"/>
 		<view class="text">
@@ -25,7 +25,8 @@
 	<row-list class="home-rowlist" wx:for="{{actor.works}}" wx:key="id" movie="{{item}}"></row-list>
 </panel>
 
-<button class="btn" bindtap="createUserCollection" wx:if="{{is_collection==0}}">关 注</button>
+<button class="btn" bindtap="createUserCollection" wx:if="{{is_collection==0}}">+关 注</button>
+<button class="btndelete" bindtap="deleteUserCollection" wx:if="{{is_collection==1}}">取消关注</button>
 
 <footer></footer>
 <view style="height: 80rpx;"></view>
