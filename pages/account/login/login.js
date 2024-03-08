@@ -8,8 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    account: "13831446886",
-    password: "123456",
+    account: "",
+    password: "",
     code: "",
     isShowPassword: false,
   },
